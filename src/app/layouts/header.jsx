@@ -20,22 +20,22 @@ const Header = () => {
       <div className="max-w-[1280px] w-[90%] m-auto h-full flex items-center justify-between">
         <img src="image/logo.svg" alt="Logo" className="h-full" />
         <nav className="hidden gap-4 text-base font-semibold text-white lg:flex">
-          <Link href="/home" className="cursor-pointer">
+          <Link href="/" className="cursor-pointer nav_item">
             Home
           </Link>
-          <Link href="/home" className="cursor-pointer">
+          <Link href="/aboutus" className="cursor-pointer nav_item">
             About US
           </Link>
-          <Link href="/home" className="cursor-pointer">
+          <Link href="/ourfleet" className="cursor-pointer nav_item">
             Our Fleet
           </Link>
-          <Link href="/home" className="cursor-pointer">
+          <Link href="/services" className="cursor-pointer nav_item">
             Services
           </Link>
-          <Link href="/home" className="cursor-pointer">
+          <Link href="/home" className="cursor-pointer nav_item">
             Promo
           </Link>
-          <Link href="/home" className="cursor-pointer">
+          <Link href="/contactus" className="cursor-pointer nav_item">
             Contact
           </Link>
         </nav>
@@ -71,17 +71,17 @@ const Header = () => {
       >
         <div className="w-full h-full pt-10 bg-[#FDEEEC] relative">
           <img src="image/logo.svg" className="w-48 m-auto" alt="" />
-          <nav className="flex flex-col gap-4 text-base font-semibold text-[var(--text-color)] pl-8 pt-8">
+          <nav className="flex flex-col gap-6 text-base font-semibold text-[var(--text-color)] pl-8 pt-8">
             <Link href="/home" className="cursor-pointer">
               Home
             </Link>
-            <Link href="/home" className="cursor-pointer">
+            <Link href="/aboutus" className="cursor-pointer">
               About US
             </Link>
-            <Link href="/home" className="cursor-pointer">
+            <Link href="/ourfleet" className="cursor-pointer">
               Our Fleet
             </Link>
-            <Link href="/home" className="cursor-pointer">
+            <Link href="/services" className="cursor-pointer">
               Services
             </Link>
             <Link href="/home" className="cursor-pointer">
