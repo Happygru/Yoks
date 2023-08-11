@@ -10,7 +10,7 @@ const Aboutus = () => {
     <>
       <div className="w-full">
         <BreadCrumb title="About Us">
-          <Link href="/">Home</Link> - <Link href="javascript:;">About Us</Link>
+          <Link href="/">Home</Link> - <Link href="#">About Us</Link>
         </BreadCrumb>
         <img src="image/aboutus/banner.svg" className="w-full" alt="" />
       </div>

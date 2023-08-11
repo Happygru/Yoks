@@ -14,7 +14,7 @@ const RButton = (props) => {
         istransparent
           ? "bg-[rgba(2,66,115,0.18)] hover:bg-[rgba(2,66,115,0.28)]"
           : "bg-[#024273] hover:bg-[rgba(2,66,115,0.9)]"
-      }  px-4 py-3 text-white font-semibold cursor-pointer transition-all hover:transition-all select-none text-[18px] `}
+      } w-max  px-4 py-3 text-white font-semibold cursor-pointer transition-all hover:transition-all select-none text-[18px] `}
     >
       {children}
     </div>
