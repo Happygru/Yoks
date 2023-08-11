@@ -9,11 +9,13 @@ import { TbWorld } from "react-icons/tb";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
+import "aos/dist/aos.css";
+
 /* eslint-disable @next/next/no-img-element */
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => {
-    setIsOpen((prevState) => !prevState);
+    setIsOpen(!isOpen);
   };
   return (
     <div className="w-full h-[100px] bg-[var(--main-color1)] py-4">
@@ -55,7 +57,10 @@ const Header = () => {
           <RButton isfullradius={true} istransparent={false}>
             SignUp
           </RButton>
-          <span className="text-3xl font-bold text-white cursor-pointer">
+          <span
+            className="block text-3xl font-bold text-white cursor-pointer md:hidden"
+            onClick={toggleDrawer}
+          >
             <BsList />
           </span>
         </div>

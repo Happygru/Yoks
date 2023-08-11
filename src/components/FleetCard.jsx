@@ -6,9 +6,12 @@ import { GrCar } from "react-icons/gr";
 import { TbAirConditioning } from "react-icons/tb";
 import { BsArrowUpRight } from "react-icons/bs";
 
-const FleetCard = () => {
+const FleetCard = (props) => {
   return (
-    <div className="p-8 bg-white rounded-md max-w-[370px] w-full flex flex-col gap-4 border border-[#dedede] shadow-lg cursor-pointer">
+    <div
+      {...props}
+      className="p-8 bg-white rounded-md max-w-[370px] w-full flex flex-col gap-4 border border-[#dedede] shadow-lg cursor-pointer"
+    >
       <h1 className="text-[var(--text-color)] font-semibold text-[20px]">
         Compact Sedan Cars
       </h1>

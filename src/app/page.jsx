@@ -1,6 +1,8 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-
+import { useEffect } from "react";
+import AOS from "aos";
 import RButton from "@/components/RButton";
 import { FaPlay } from "react-icons/fa";
 import {
@@ -11,8 +13,13 @@ import { BsArrowUpRight } from "react-icons/bs";
 import ValuesCard from "@/components/ValuesCard";
 import FleetCard from "@/components/FleetCard";
 import SlideCard from "@/components/SlideCard";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <div className="relative w-full">
@@ -20,7 +27,7 @@ const Home = () => {
           <div className="max-w-[1280px] w-[90%] h-full m-auto grid grid-rows-2 relative">
             <div className="row-span-1">
               <div className="flex items-center justify-end w-full h-full">
-                <RButton isradius={true}>
+                <RButton isradius={true} data-aos="fade-down">
                   <span className="flex items-center gap-4 px-10">
                     <FaPlay />
                     Book Now
@@ -29,7 +36,10 @@ const Home = () => {
               </div>
             </div>
             <div className="row-span-1">
-              <p className="text-white font-bold text-[26px] md:text-[38px] lg:text-[46px] xl:text-[52px] w-full md:w-2/3">
+              <p
+                className="text-white font-bold text-[26px] md:text-[38px] lg:text-[46px] xl:text-[52px] w-full md:w-2/3"
+                data-aos="fade-up"
+              >
                 Your preferred choice for safety and reliability on the road
               </p>
             </div>
@@ -45,16 +55,22 @@ const Home = () => {
               icon="safetyFirst.svg"
               title="Safety First"
               text="We make an extra effort to ensure that safety standard are at their highest peak  and adhered to at all times."
+              data-aos="fade-up"
+              data-aos-duration="150"
             />
             <ValuesCard
               icon="integrity.svg"
               title="Integrity"
               text="We are respectful and responsible for following through on our commitments to clients and other stakeholders."
+              data-aos="fade-up"
+              data-aos-duration="250"
             />
             <ValuesCard
               icon="accountability.svg"
               title="Accountability"
               text="We demand accountability in every aspect of our business from all our staff."
+              data-aos="fade-up"
+              data-aos-duration="350"
             />
           </div>
         </div>
@@ -76,9 +92,9 @@ const Home = () => {
             </span>
           </div>
           <div className="flex flex-wrap justify-center w-full gap-6 xl:flex-nowrap">
-            <FleetCard />
-            <FleetCard />
-            <FleetCard />
+            <FleetCard data-aos="fade-up" data-aos-duration="150" />
+            <FleetCard data-aos="fade-up" data-aos-duration="250" />
+            <FleetCard data-aos="fade-up" data-aos-duration="350" />
           </div>
         </div>
       </div>
@@ -101,7 +117,11 @@ const Home = () => {
               <BsArrowUpRight className="text-base text-[var(--text-color)] font-bold" />
             </span>
           </div>
-          <div className="w-full text-xl text-center md:text-3xl">
+          <div
+            className="w-full text-xl text-center md:text-3xl"
+            data-aos="fade-up"
+            data-aos-duration="150"
+          >
             <p>
               YOKS RENT - A - CAR&apos;s VALUE PROPOSITION is to provide
               solutions in transportation, by providing clients with the desired
@@ -128,11 +148,17 @@ const Home = () => {
           className="absolute top-0 w-full h-full -z-10"
         /> */}
         <div className="max-w-[1280px] w-[90%] h-full grid grid-cols-1 md:grid-cols-2 items-center justify-center m-auto py-2">
-          <div className=" text-white flex flex-wrap gap-2 md:block text-[28px] md:text-[35px] lg:text-[40px] font-semibold col-span-1">
+          <div
+            className=" text-white flex flex-wrap gap-2 md:block text-[28px] md:text-[35px] lg:text-[40px] font-semibold col-span-1"
+            data-aos="fade-right"
+          >
             <p>Showcase some</p>
             <p>impressive numbers.</p>
           </div>
-          <div className="flex items-center justify-between col-span-1">
+          <div
+            className="flex items-center justify-between col-span-1"
+            data-aos="fade-left"
+          >
             <div className="text-center text-white">
               <p className="text-[40px] font-semibold leading-tight">285</p>
               <p>vehicles</p>
@@ -157,7 +183,11 @@ const Home = () => {
           We make sure that your every trip is comfortable
         </h1>
         <div className="w-[90%] max-w-[1280px] m-auto grid grid-cols-3 mt-20 gap-20 mb-20">
-          <div className="flex flex-col items-center justify-center col-span-1 gap-4">
+          <div
+            className="flex flex-col items-center justify-center col-span-1 gap-4"
+            data-aos="fade-up"
+            data-duration="150"
+          >
             <img
               src="image/home/accountability.svg"
               alt=""
@@ -168,27 +198,43 @@ const Home = () => {
               <p>Selection</p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center col-span-1 gap-4">
+          <div
+            className="flex flex-col items-center justify-center col-span-1 gap-4"
+            data-aos="fade-up"
+            data-duration="200"
+          >
             <img src="image/home/phone.svg" alt="" className="h-[50px]" />
             <div className="text-[var(--text-color)]">
               <p>24/7 Order</p>
               <p>Available</p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center col-span-1 gap-4">
+          <div
+            className="flex flex-col items-center justify-center col-span-1 gap-4"
+            data-aos="fade-up"
+            data-duration="250"
+          >
             <img src="image/home/driver.svg" alt="" className="h-[50px]" />
             <div className="text-[var(--text-color)]">
               <p>Professional</p>
               <p>Car Drivers</p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center col-span-1 gap-4">
+          <div
+            className="flex flex-col items-center justify-center col-span-1 gap-4"
+            data-aos="fade-up"
+            data-duration="300"
+          >
             <img src="image/home/safetyFirst.svg" alt="" className="h-[50px]" />
             <div className="text-[var(--text-color)]">
               <p>Safe Drive</p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center col-span-1 gap-4">
+          <div
+            className="flex flex-col items-center justify-center col-span-1 gap-4"
+            data-aos="fade-up"
+            data-duration="350"
+          >
             <img src="image/home/integrity.svg" alt="" className="h-[50px]" />
             <div className="text-[var(--text-color)]">
               <p>Competitive Price</p>
@@ -198,7 +244,11 @@ const Home = () => {
       </div>
       <div className="w-full bg-[#FDEEEC] py-16">
         <div className="w-[90%] max-w-[1280px] m-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-36">
-          <div className="flex flex-col items-start justify-start col-span-1 gap-6">
+          <div
+            className="flex flex-col items-start justify-start col-span-1 gap-6"
+            data-aos="fade-up"
+            data-duration="200"
+          >
             <p className="text-[40px] font-semibold">
               Hear what our amazing customers say
             </p>
@@ -213,7 +263,11 @@ const Home = () => {
               </p>
             </RButton>
           </div>
-          <div className="flex flex-col col-span-1 gap-8">
+          <div
+            className="flex flex-col col-span-1 gap-8"
+            data-aos="fade-down"
+            data-duration="200"
+          >
             <div className="w-full">
               <SlideCard />
             </div>
