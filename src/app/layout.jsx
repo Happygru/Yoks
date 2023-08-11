@@ -5,11 +5,6 @@ import "./globals.css";
 import Header from "@/app/layouts/header";
 import Footer from "@/app/layouts/footer";
 
-export const metadata = {
-  title: "YOK",
-  description: "YOK Website",
-};
-
 export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
 
