@@ -9,8 +9,6 @@ import { TbWorld } from "react-icons/tb";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
-import "aos/dist/aos.css";
-
 /* eslint-disable @next/next/no-img-element */
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +69,32 @@ const Header = () => {
         direction="right"
         className="bla"
       >
-        <div>Hello World</div>
+        <div className="w-full h-full pt-10 bg-[#FDEEEC] relative">
+          <img src="image/logo.svg" className="w-48 m-auto" alt="" />
+          <nav className="flex flex-col gap-4 text-base font-semibold text-[var(--text-color)] pl-8 pt-8">
+            <Link href="/home" className="cursor-pointer">
+              Home
+            </Link>
+            <Link href="/home" className="cursor-pointer">
+              About US
+            </Link>
+            <Link href="/home" className="cursor-pointer">
+              Our Fleet
+            </Link>
+            <Link href="/home" className="cursor-pointer">
+              Services
+            </Link>
+            <Link href="/home" className="cursor-pointer">
+              Promo
+            </Link>
+            <Link href="/home" className="cursor-pointer">
+              Contact
+            </Link>
+          </nav>
+          <span className="absolute flex items-center text-sm font-semibold text-[var(--text-color)] bottom-4 pl-8">
+            <BsTelephone /> + 233 540-614-545
+          </span>
+        </div>
       </Drawer>
     </div>
   );
