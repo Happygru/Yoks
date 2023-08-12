@@ -39,15 +39,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="grid w-full grid-cols-1 mt-4 lg:grid-cols-2">
-          <div className="flex flex-col col-span-1 gap-4">
+        <div className="grid w-full mt-4">
+          <div className="flex flex-col gap-4">
             <p className="text-white text-[40px] font-semibold">Contact Us</p>
             <p className="text-lg text-white text-semibold">
               For Enquires Please get in touch with us and our Staff will be
               glad o assist you
             </p>
           </div>
-          <div className="col-span-1"></div>
         </div>
         <div className="grid w-full grid-cols-1 gap-20 mt-6 lg:grid-cols-2">
           <div className="flex flex-col items-center lg:items-start col-span-1 gap-4">
