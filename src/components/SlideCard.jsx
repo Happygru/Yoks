@@ -51,7 +51,7 @@ const SlideCard = () => {
           </p>
         </div>
         <div className="p-8 bg-white rounded-md w-full flex flex-col gap-4 pt-10  h-[260px]">
-          <p className="text-lg">Rebecca Meuller</p>
+          <p className="text-lg">Funsho Odewoye</p>
           <p className="text-sm">
             <br />
           </p>

@@ -302,7 +302,7 @@ const Home = () => {
             </p>
             <p>
               Feel free to leave us a review we will be glad to hear about your
-              experience with is
+              experience with us
             </p>
             <RButton isradius={true}>
               <p className="flex items-center gap-4">
