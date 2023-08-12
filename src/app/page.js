@@ -136,6 +136,26 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="w-full grid grid-cols-2">
+        <div className="col-span-1">
+          <img src="image/home/airportpickup.svg" className="w-full" alt="" />
+        </div>
+        <div className="col-span-1 px-24 flex justify-center flex-col">
+          <h1 className="text-[44px] font-semibold">Airport Pickup</h1>
+          <p className="my-8">
+            Our airport shuttle service provides a convenient and stress-free
+            way to get to and from the airport. We offer pick-up and drop-off
+            services from all major airports, including JFK, LaGuardia, and
+            Newark Liberty International.
+          </p>
+          <RButton isradius={true}>
+            <p className="flex items-center gap-4">
+              <span className="text-base">More Detail</span>
+              <BsArrowUpRight />
+            </p>
+          </RButton>
+        </div>
+      </div>
       <div
         className="w-full h-max lg:h-[275px] overflow-hidden relative"
         style={{
@@ -173,6 +193,40 @@ const Home = () => {
         <h1 className="text-center text-[var(--text-color)] text-[40px] mt-5 font-semibold">
           Discover Ghana with YOKS
         </h1>
+        <div className="max-w-[1280px] w-[90%] grid grid-cols-4 gap-8 m-auto mt-6">
+          <div className="col-span-1 flex flex-col gap-4 items-center justify-center">
+            <img
+              src="image/services/tourpackages_thumbnail1.svg"
+              className="rounded-md"
+              alt=""
+            />
+            <p>Elmina</p>
+          </div>
+          <div className="col-span-1 flex flex-col gap-4 items-center justify-center">
+            <img
+              src="image/services/tourpackages_thumbnail2.svg"
+              className="rounded-md"
+              alt=""
+            />
+            <p>Larabanga mosque</p>
+          </div>
+          <div className="col-span-1 flex flex-col gap-4 items-center justify-center">
+            <img
+              src="image/services/tourpackages_thumbnail3.svg"
+              className="rounded-md"
+              alt=""
+            />
+            <p>Axim</p>
+          </div>
+          <div className="col-span-1 flex flex-col gap-4 items-center justify-center">
+            <img
+              src="image/services/tourpackages_thumbnail4.svg"
+              className="rounded-md"
+              alt=""
+            />
+            <p>Aburl botanical garden</p>
+          </div>
+        </div>
         <img src="image/home/discover_yoks.svg" alt="" className="w-full" />
         <h1 className="text-center text-[var(--text-color)] text-[40px] mt-5 font-semibold">
           We make sure that your every trip is comfortable

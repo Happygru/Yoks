@@ -18,14 +18,13 @@ const Header = () => {
   return (
     <div className="w-full h-[100px] bg-[var(--main-color1)] py-4">
       <div className="max-w-[1280px] w-[90%] m-auto h-full flex items-center justify-between">
-        <img src="image/logo.svg" alt="Logo" className="h-full" />
+        <Link href="/" className="w-max">
+          <img src="image/logo.svg" alt="Logo" className="h-full" />
+        </Link>
         <nav className="hidden gap-4 text-base font-semibold text-white lg:flex">
           <Link href="/" className="cursor-pointer nav_item">
             Home
           </Link>
-          {/* <Link href="/aboutus" className="cursor-pointer nav_item">
-            About US
-          </Link> */}
           <div class="dropdown">
             <button class="dropbtn cursor-pointer nav_item">Dropdown</button>
             <div class="dropdown-content">
