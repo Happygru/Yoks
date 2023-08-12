@@ -27,7 +27,7 @@ const ShuttleService = () => {
           </div>
         </div>
         <img
-          src="image/services/shuttle_banner.svg"
+          src="image/services/shuttle_banner.png"
           className="w-full"
           alt=""
         />
@@ -111,14 +111,14 @@ const ShuttleService = () => {
           </div>
           <div className="cols-span-1">
             <img
-              src="image/services/shuttle_thumbnail2.svg"
+              src="image/services/shuttle_thumbnail2.png"
               className="w-full"
               alt=""
             />
           </div>
           <div className="cols-span-1">
             <img
-              src="image/services/shuttle_thumbnail3.svg"
+              src="image/services/shuttle_thumbnail3.png"
               className="w-full"
               alt=""
             />

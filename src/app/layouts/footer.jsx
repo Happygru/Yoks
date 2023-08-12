@@ -49,7 +49,7 @@ const Footer = () => {
           <div className="col-span-1"></div>
         </div>
         <div className="grid w-full grid-cols-1 gap-20 mt-6 lg:grid-cols-2">
-          <div className="flex flex-col items-center col-span-1 gap-4">
+          <div className="flex flex-col items-center lg:items-start col-span-1 gap-4">
             <div className="flex flex-col gap-4">
               <p className="text-lg font-semibold text-center text-white opacity-60 lg:text-left">
                 Head Office
@@ -62,7 +62,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center w-full gap-4 text-lg text-white">
+            <div className="flex justify-center  lg:justify-start w-full gap-4 text-lg text-white">
               <LuPhone className="mt-1 text-xl" />
               <div>
                 Tel: +233 596-911-066 ǀ Hotlines +233 540-614-545
@@ -70,19 +70,19 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center col-span-1 gap-4">
+          <div className="flex flex-col items-center lg:items-start col-span-1 gap-4">
             <div className="flex flex-col gap-4">
               <p className="text-lg font-semibold text-center text-white opacity-60 lg:text-left">
                 Movenpick Ambassador Hotel Accra, Ghana (Transport Desk)
               </p>
-              <div className="flex justify-center w-full gap-4 text-lg text-white">
+              <div className="flex justify-center  lg:justify-start w-full gap-4 text-lg text-white">
                 <SlLocationPin className="mt-1 text-xl" />
                 <div>
                   PMB CT 343, Independence Ave, <p>Accra Ghana</p>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center w-full gap-4 text-lg text-white">
+            <div className="flex justify-center  lg:justify-start w-full gap-4 text-lg text-white">
               <LuPhone className="mt-1 text-xl" />
               <div>
                 Hotlines +233 540-614-545 ǀ +233 243-600-277

@@ -14,7 +14,7 @@ const Services = () => {
         <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20">
           <div className="col-span-1">
             <ServiceCard
-              img="thumbnail1.svg"
+              img="thumbnail1.png"
               title="Chauffeur Driven Day Trips"
               text="Our most popular car rental service which includes the vehicle of your choice"
               url="service_chauffaeur"
@@ -30,7 +30,7 @@ const Services = () => {
           </div>
           <div className="col-span-1">
             <ServiceCard
-              img="thumbnail3.svg"
+              img="thumbnail3.png"
               title="Corporate Fleet Management"
               text="Over the years we have built the technical capacity and managerial competencies in fleet management"
               url="service_corperatefleet"
@@ -38,7 +38,7 @@ const Services = () => {
           </div>
           <div className="col-span-1">
             <ServiceCard
-              img="thumbnail4.svg"
+              img="thumbnail4.png"
               title="YOKS Shuttle Services"
               text="Whether you need to be picked up from the airport, home, school, your workers and safely transported"
               url="service_shuttle"

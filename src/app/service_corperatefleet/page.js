@@ -27,7 +27,7 @@ const Corperatefleet = () => {
           </div>
         </div>
         <img
-          src="image/services/chauffaeur_banner.svg"
+          src="image/services/corperatefleet_banner.png"
           className="w-full"
           alt=""
         />

@@ -138,7 +138,7 @@ const Home = () => {
       </div>
       <div className="w-full grid grid-cols-2">
         <div className="col-span-1">
-          <img src="image/home/airportpickup.svg" className="w-full" alt="" />
+          <img src="image/home/airportpickup.png" className="w-full" alt="" />
         </div>
         <div className="col-span-1 px-24 flex justify-center flex-col">
           <h1 className="text-[44px] font-semibold">Airport Pickup</h1>

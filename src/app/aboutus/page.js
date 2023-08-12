@@ -12,7 +12,7 @@ const Aboutus = () => {
         <BreadCrumb title="About Us">
           <Link href="/">Home</Link> - <Link href="#">About Us</Link>
         </BreadCrumb>
-        <img src="image/aboutus/banner.svg" className="w-full" alt="" />
+        <img src="image/aboutus/banner.png" className="w-full" alt="" />
       </div>
       <div className="w-full">
         <div className="max-w-[1280px] w-[90%] md:px-[10%] m-auto py-12 font-semibold leading-8 text-center flex flex-col items-center gap-4">
@@ -195,15 +195,15 @@ const Aboutus = () => {
         </div>
       </div>
       <div
-        className="w-full py-24"
+        className="w-full py-60"
         style={{
-          backgroundImage: "url(image/aboutus/csr_background.svg)",
+          backgroundImage: "url(image/aboutus/csr_background.png)",
           backgroundSize: "cover",
         }}
       >
         <div className="max-w-[1280px] w-[90%] m-auto text-center text-white">
           <h1 className="font-semibold text-7xl">CSR</h1>
-          <p className="text-3xl leading-10">
+          <p className="text-3xl leading-10 mt-36">
             YOKS is committed to planting 20 trees every quarter by contracting
             the Youth to provide gainful employment as it implements it plans in
             Accra. YOKS to adopt 5 major streets the next 5 years to plant trees
