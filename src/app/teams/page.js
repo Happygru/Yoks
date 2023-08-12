@@ -41,12 +41,19 @@ const Teams = () => {
       </div>
       <div className="w-full">
         <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 pb-8">
-          <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
-            <img src="image/teams/user1.svg" alt="" className="w-full" />
-            <div>
-              <p className="text-lg font-bold">Mr Steth Yeboah Ocran</p>
-              <p className="text-lg">CEO</p>
-            </div>
+          <div className="col-span-1">
+            <Link
+              href="/"
+              className="w-full flex flex-col gap-6 cursor-pointer"
+            >
+              <>
+                <img src="image/teams/user1.svg" alt="" className="w-full" />
+                <div>
+                  <p className="text-lg font-bold">Mr Steth Yeboah Ocran</p>
+                  <p className="text-lg">CEO</p>
+                </div>
+              </>
+            </Link>
           </div>
           <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
             <img src="image/teams/user2.svg" alt="" className="w-full" />

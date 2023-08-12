@@ -23,9 +23,16 @@ const Header = () => {
           <Link href="/" className="cursor-pointer nav_item">
             Home
           </Link>
-          <Link href="/aboutus" className="cursor-pointer nav_item">
+          {/* <Link href="/aboutus" className="cursor-pointer nav_item">
             About US
-          </Link>
+          </Link> */}
+          <div class="dropdown">
+            <button class="dropbtn cursor-pointer nav_item">Dropdown</button>
+            <div class="dropdown-content">
+              <Link href="/aboutus">About Us</Link>
+              <Link href="/teams">Our Team</Link>
+            </div>
+          </div>
           <Link href="/teams" className="cursor-pointer nav_item">
             Our Fleet
           </Link>

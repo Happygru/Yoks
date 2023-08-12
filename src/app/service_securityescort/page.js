@@ -26,50 +26,45 @@ const Meet = () => {
             </div>
           </div>
         </div>
-        <img src="image/services/meet_banner.svg" className="w-full" alt="" />
+        <img
+          src="image/services/securityescort_banner.svg"
+          className="w-full"
+          alt=""
+        />
       </div>
       <div className="w-full">
-        <div className="max-w-[1280px] w-[90%] m-auto py-16">
-          <h1 className="text-[44px] text-[var(--text-color)] font-semibold">
-            Meet & Greet | Visa Arrangement On Arrival
-          </h1>
-          <p className="text-[var(--text-color)] mt-6">
-            We understand that traveling to a new place can be an exciting yet
-            stressful experience, especially when it comes to getting a visa on
-            arrival. That&apos;s why we are here to make your travel experience
-            as smooth and stress-free as possible.
-          </p>
-          <p className="text-[var(--text-color)] mt-6">
-            With our Meet & Greet | Visa Arrangement on arrival service, you can
-            avoid the long queues and hassle of getting a visa on arrival. Our
-            experienced team of professionals will take care of the visa
-            application process for you and make sure you have a seamless
-            arrival experience.
-          </p>
-          <img
-            src="image/services/meet_thumbnail1.svg"
-            className="w-full mt-6"
-            alt=""
-          />
-          <p className="text-[var(--text-color)] mt-6">
-            We will meet you at the airport with a warm welcome and assist you
-            with your visa application process. Our team will take care of all
-            the necessary formalities and ensure that you get your visa in the
-            shortest time possible. Once your visa is approved, we will escort
-            you to your vehicle and ensure that you have a comfortable and safe
-            journey ahead.
-          </p>
-          <p className="text-[var(--text-color)] mt-6">
-            We understand the importance of time and the need to make the most
-            of your trip, that&nbsp;s why we offer this service at an affordable
-            price. Our team will ensure that you have a smooth and stress-free
-            arrival experience, so that you can start your journey with a smile.
-          </p>
-          <p className="text-[var(--text-color)] mt-6">
-            So, why wait? Book your Meet & Greet | Visa Arrangement on arrival
-            service today and enjoy a hassle-free arrival experience. We look
-            forward to welcoming you soon.
-          </p>
+        <div className="max-w-[1280px] w-[90%] m-auto py-16 grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div className="col-span-1">
+            <img
+              src="image/services/securityescort_thumbnail1.svg"
+              alt=""
+              className="w-full"
+            />
+          </div>
+          <div className="col-span-1">
+            <h1 className="text-[44px] text-[var(--text-color)]">
+              Security Escort Services
+            </h1>
+            <p className="text-[var(--text-color)] mt-4">
+              ur high value clients who may need a little extra security are
+              provided for based on formal request from our clients for all
+              travels and personnel protection. A standard escort team shall
+              comprise of; One Security Supervisor, One security Driver and
+              two-armed police officer. We are also able to arrange with police
+              MTTD to provide a single motorcade escort as an alternative
+              arrangement. Escorts shall be carried out with one passenger
+              vehicle (Saloon Car or Jeep) as requested by the client and an
+              escort vehicle a- 4X4 Jeep.ur high value clients who may need a
+              little extra security are provided for based on formal request
+              from our clients for all travels and personnel protection. A
+              standard escort team shall comprise of; One Security Supervisor,
+              One security Driver and two-armed police officer. We are also able
+              to arrange with police MTTD to provide a single motorcade escort
+              as an alternative arrangement. Escorts shall be carried out with
+              one passenger vehicle (Saloon Car or Jeep) as requested by the
+              client and an escort vehicle a- 4X4 Jeep.
+            </p>
+          </div>
         </div>
       </div>
     </div>

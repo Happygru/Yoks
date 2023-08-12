@@ -65,6 +65,7 @@ const Services = () => {
               img="thumbnail7.svg"
               title="Security Escort"
               text="our high value clients who may need a little extra security are provided for based on formal request ."
+              url="service_securityescort"
             />
           </div>
           <div className="col-span-1">
