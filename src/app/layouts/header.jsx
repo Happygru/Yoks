@@ -26,7 +26,7 @@ const Header = () => {
           <Link href="/aboutus" className="cursor-pointer nav_item">
             About US
           </Link>
-          <Link href="/ourfleet" className="cursor-pointer nav_item">
+          <Link href="/teams" className="cursor-pointer nav_item">
             Our Fleet
           </Link>
           <Link href="/services" className="cursor-pointer nav_item">
