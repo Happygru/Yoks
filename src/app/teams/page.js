@@ -58,7 +58,6 @@ const Teams = () => {
           <div className="col-span-1">
             <Link
               href="/profile_daphne"
-              target="_blank"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -75,7 +74,6 @@ const Teams = () => {
           <div className="col-span-1">
             <Link
               href="/profile_charles"
-              target="_blank"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -90,7 +88,6 @@ const Teams = () => {
           <div className="col-span-1">
             <Link
               href="/profile_emmanuel"
-              target="_blank"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -105,7 +102,6 @@ const Teams = () => {
           <div className="col-span-1">
             <Link
               href="/profile_george"
-              target="_blank"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -120,7 +116,6 @@ const Teams = () => {
           <div className="col-span-1">
             <Link
               href="/profile_vivian"
-              target="_blank"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -135,7 +130,6 @@ const Teams = () => {
           <div className="col-span-1">
             <Link
               href="/profile_cyril"
-              target="_blank"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -150,7 +144,6 @@ const Teams = () => {
           <div className="col-span-1">
             <Link
               href="/profile_solomon"
-              target="_blank"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>

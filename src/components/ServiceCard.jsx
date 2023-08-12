@@ -15,7 +15,6 @@ const ServiceCard = (props) => {
       <div>
         <Link
           href={`/${url}`}
-          target="_blank"
           className="text-[var(--main-color)] flex gap-4 items-center"
         >
           <span className="text-base">Learn more</span>
