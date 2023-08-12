@@ -27,7 +27,7 @@ const serviceChauffaeur = () => {
           </div>
         </div>
         <img
-          src="image/services/selfdrive_banner.svg"
+          src="image/services/selfdrive_banner.png"
           className="w-full"
           alt=""
         />
