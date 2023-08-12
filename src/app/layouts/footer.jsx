@@ -7,6 +7,7 @@ import { GiWorld } from "react-icons/gi";
 import RButton from "@/components/RButton";
 import AppleButton from "@/components/AppleButton";
 import GooglePlayButton from "@/components/GooglePlayButton";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -106,7 +107,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between w-full gap-8 py-4 font-semibold text-white lg:gap-2 lg:flex-row">
           <p>© 2023 YOKS RENTAL-A-CAR</p>
           <div className="flex gap-4">
-            <p>Terms</p>
+            <Link href="/terms">Terms</Link>
             <p>Privacy policy</p>
             <p>Legal</p>
             <p>notice Accessibility</p>
