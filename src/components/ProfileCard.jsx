@@ -4,7 +4,7 @@ import { BsInstagram } from "react-icons/bs";
 const ProfileCard = (props) => {
   const { img, name, addr } = props;
   return (
-    <div className="bg-white shadow-md rounded-md p-5 w-full">
+    <div className="bg-white shadow-md rounded-md p-5 w-full md:mt-[-150px]">
       <img className="w-full" alt="" src={`image/teams/${img}`} />
       <p className="text-xl text-[var(--text-color)] text-center mt-3 font-semibold uppercase">
         {name}

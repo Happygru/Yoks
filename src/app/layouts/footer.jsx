@@ -44,7 +44,7 @@ const Footer = () => {
             <p className="text-white text-[40px] font-semibold">Contact Us</p>
             <p className="text-lg text-white text-semibold">
               For Enquires Please get in touch with us and our Staff will be
-              glad o assist you
+              glad to assist you
             </p>
           </div>
         </div>
@@ -106,10 +106,8 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between w-full gap-8 py-4 font-semibold text-white lg:gap-2 lg:flex-row">
           <p>© 2023 YOKS RENTAL-A-CAR</p>
           <div className="flex gap-4">
-            <Link href="/terms">Terms</Link>
-            <p>Privacy policy</p>
-            <p>Legal</p>
-            <p>notice Accessibility</p>
+            <Link href="/terms">Terms & Condition</Link>
+            <Link href="#">FAQ</Link>
           </div>
           <div className="flex gap-4">
             <RButton isfullradius={true} istransparent={true}>

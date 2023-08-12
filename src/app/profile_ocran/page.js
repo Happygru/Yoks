@@ -15,7 +15,7 @@ const ProfileOcran = () => {
       </div>
       <div className="w-full">
         <div className="max-w-[1280px] m-auto w-[90%]">
-          <div className="w-full grid grid-cols-5 py-8">
+          <div className="w-full flex flex-col-reverse gap-4 md:grid grid-cols-5 py-8">
             <div className="col-span-3 border-t border-[#dedede]">
               <h1 className="text-2xl border-b-2 border-[var(--text-color)] mt-1 font-semibold w-max pb-2">
                 Biography
@@ -72,7 +72,7 @@ const ProfileOcran = () => {
             Awards
           </h1>
           <hr className="w-3/5" />
-          <div className="w-full grid grid-cols-2 pb-8 mt-4 gap-4">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 pb-8 mt-4 gap-4">
             <div className="col-span-1">
               <AwardsCard
                 year="2015"
