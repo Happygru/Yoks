@@ -47,7 +47,7 @@ const Teams = () => {
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
-                <img src="image/teams/user1.svg" alt="" className="w-full" />
+                <img src="image/teams/user1.png" alt="" className="w-full" />
                 <div>
                   <p className="text-lg font-bold">Mr Steth Yeboah Ocran</p>
                   <p className="text-lg">CEO</p>
