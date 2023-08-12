@@ -10,8 +10,8 @@ const Services = () => {
           <Link href="/">Home</Link> - <Link href="#">Services</Link>
         </BreadCrumb>
       </div>
-      <div className="w-full bg-[#dedede] py-20">
-        <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-3 gap-36">
+      <div className="w-full py-20">
+        <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20">
           <div className="col-span-1">
             <ServiceCard
               img="thumbnail1.svg"

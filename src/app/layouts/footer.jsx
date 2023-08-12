@@ -20,11 +20,7 @@ const Footer = () => {
       <div className="max-w-[1280px] w-[90%] m-auto">
         <div className="grid w-full grid-cols-1 md:grid-cols-2">
           <div className="relative col-span-1">
-            <img
-              src="image/logo.svg"
-              alt=""
-              className="xl:absolute m-auto top-0 w-9/12 left-[-28%]"
-            />
+            <img src="image/logo.svg" alt="" className="w-9/12" />
           </div>
           <div className="flex flex-col items-center col-span-1 gap-4">
             <div className="w-5/6 m-auto">

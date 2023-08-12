@@ -17,12 +17,12 @@ const Corperatefleet = () => {
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="max-w-[1280px] w-[90%] h-full relative m-auto">
             <div className="absolute right-0 top-4 w-max h-max">
-              <RButton isradius={true}>
+              {/* <RButton isradius={true}>
                 <span className="flex items-center gap-4 px-10">
                   <FaPlay />
                   Book Now
                 </span>
-              </RButton>
+              </RButton> */}
             </div>
           </div>
         </div>

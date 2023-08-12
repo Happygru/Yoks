@@ -26,7 +26,7 @@ const Header = () => {
             Home
           </Link>
           <div class="dropdown">
-            <button class="dropbtn cursor-pointer nav_item">Dropdown</button>
+            <button class="dropbtn cursor-pointer nav_item">About Us</button>
             <div class="dropdown-content">
               <Link href="/aboutus">About Us</Link>
               <Link href="/teams">Our Team</Link>
@@ -38,7 +38,7 @@ const Header = () => {
           <Link href="/services" className="cursor-pointer nav_item">
             Services
           </Link>
-          <Link href="/home" className="cursor-pointer nav_item">
+          <Link href="/" className="cursor-pointer nav_item">
             Promo
           </Link>
           <Link href="/contactus" className="cursor-pointer nav_item">
@@ -78,7 +78,7 @@ const Header = () => {
         <div className="w-full h-full pt-10 bg-[#FDEEEC] relative">
           <img src="image/logo.svg" className="w-48 m-auto" alt="" />
           <nav className="flex flex-col gap-6 text-base font-semibold text-[var(--text-color)] pl-8 pt-8">
-            <Link href="/home" className="cursor-pointer">
+            <Link href="/" className="cursor-pointer">
               Home
             </Link>
             <Link href="/aboutus" className="cursor-pointer">
@@ -90,10 +90,10 @@ const Header = () => {
             <Link href="/services" className="cursor-pointer">
               Services
             </Link>
-            <Link href="/home" className="cursor-pointer">
+            <Link href="/" className="cursor-pointer">
               Promo
             </Link>
-            <Link href="/home" className="cursor-pointer">
+            <Link href="/" className="cursor-pointer">
               Contact
             </Link>
           </nav>
