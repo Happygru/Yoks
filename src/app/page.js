@@ -45,7 +45,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <img src="image/home/banner.svg" alt="home_banner" className="w-full" />
+        <img src="image/home/banner.png" alt="home_banner" className="w-full" />
       </div>
       <div className="w-full bg-[#FDEEEC] py-8">
         <div className="max-w-[1280px] w-[90%] m-auto flex items-center flex-col gap-20">
