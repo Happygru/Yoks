@@ -32,7 +32,7 @@ const Header = () => {
               <Link href="/teams">Our Team</Link>
             </div>
           </div>
-          <Link href="/teams" className="cursor-pointer nav_item">
+          <Link href="/" className="cursor-pointer nav_item">
             Our Fleet
           </Link>
           <Link href="/services" className="cursor-pointer nav_item">
@@ -81,8 +81,14 @@ const Header = () => {
             <Link href="/" className="cursor-pointer">
               Home
             </Link>
-            <Link href="/aboutus" className="cursor-pointer">
-              About US
+            <Link href="#" className="cursor-pointer">
+              About Us
+            </Link>
+            <Link href="/aboutus" className="cursor-pointer pl-4">
+              About Us
+            </Link>
+            <Link href="/teams" className="cursor-pointer pl-4">
+              Our Team
             </Link>
             <Link href="/ourfleet" className="cursor-pointer">
               Our Fleet
@@ -93,7 +99,7 @@ const Header = () => {
             <Link href="/" className="cursor-pointer">
               Promo
             </Link>
-            <Link href="/" className="cursor-pointer">
+            <Link href="/contactus" className="cursor-pointer">
               Contact
             </Link>
           </nav>

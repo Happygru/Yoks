@@ -136,11 +136,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-full grid grid-cols-2">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2">
         <div className="col-span-1">
           <img src="image/home/airportpickup.png" className="w-full" alt="" />
         </div>
-        <div className="col-span-1 px-24 flex justify-center flex-col">
+        <div className="col-span-1 p-24 flex justify-center flex-col">
           <h1 className="text-[44px] font-semibold">Airport Pickup</h1>
           <p className="my-8">
             Our airport shuttle service provides a convenient and stress-free
@@ -193,8 +193,8 @@ const Home = () => {
         <h1 className="text-center text-[var(--text-color)] text-[40px] mt-5 font-semibold">
           Discover Ghana with YOKS
         </h1>
-        <div className="max-w-[1280px] w-[90%] grid grid-cols-4 gap-8 m-auto mt-6">
-          <div className="col-span-1 flex flex-col gap-4 items-center justify-center">
+        <div className="max-w-[1280px] w-[90%] grid sm:grid-cols-2 lg:grid-cols-4 gap-8 m-auto mt-6">
+          <div className="col-span-1 flex flex-col gap-4 items-center">
             <img
               src="image/services/tourpackages_thumbnail1.svg"
               className="rounded-md"
@@ -202,7 +202,7 @@ const Home = () => {
             />
             <p>Elmina</p>
           </div>
-          <div className="col-span-1 flex flex-col gap-4 items-center justify-center">
+          <div className="col-span-1 flex flex-col gap-4 items-center">
             <img
               src="image/services/tourpackages_thumbnail2.svg"
               className="rounded-md"
@@ -210,7 +210,7 @@ const Home = () => {
             />
             <p>Larabanga mosque</p>
           </div>
-          <div className="col-span-1 flex flex-col gap-4 items-center justify-center">
+          <div className="col-span-1 flex flex-col gap-4 items-center">
             <img
               src="image/services/tourpackages_thumbnail3.svg"
               className="rounded-md"
@@ -218,7 +218,7 @@ const Home = () => {
             />
             <p>Axim</p>
           </div>
-          <div className="col-span-1 flex flex-col gap-4 items-center justify-center">
+          <div className="col-span-1 flex flex-col gap-4 items-center">
             <img
               src="image/services/tourpackages_thumbnail4.svg"
               className="rounded-md"
