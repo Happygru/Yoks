@@ -66,7 +66,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 const FAQ = () => {
-  const [expanded, setExpanded] = useState("panel6");
+  const [expanded, setExpanded] = useState("");
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect } from "react";
 import AOS from "aos";
 import RButton from "@/components/RButton";
-import { FaPlay } from "react-icons/fa";
 import {
   LiaLongArrowAltLeftSolid,
   LiaLongArrowAltRightSolid,
@@ -319,15 +318,6 @@ const Home = () => {
           >
             <div className="w-full">
               <SlideCard />
-            </div>
-            <div className="flex items-center w-full gap-4">
-              <div className="p-3 bg-white rounded-full cursor-pointer w-max">
-                <LiaLongArrowAltLeftSolid />
-              </div>
-              <div className="p-3 bg-white rounded-full cursor-pointer w-max">
-                <LiaLongArrowAltRightSolid />
-              </div>
-              <p>1/5</p>
             </div>
           </div>
         </div>
