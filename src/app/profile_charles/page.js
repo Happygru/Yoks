@@ -35,7 +35,7 @@ const ProfileOcran = () => {
             <div className="col-span-2 sm:px-[5%] md:px-[10%] lg:px-[15%]">
               <ProfileCard
                 img="user3.svg"
-                name="Mr Seth Yeboah Ocran"
+                name="CHARLES OKYERE"
                 addr="info@yoksghana.com"
               />
             </div>

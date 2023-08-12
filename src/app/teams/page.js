@@ -49,7 +49,7 @@ const Teams = () => {
               <>
                 <img src="image/teams/user1.png" alt="" className="w-full" />
                 <div>
-                  <p className="text-lg font-bold">Mr Steth Yeboah Ocran</p>
+                  <p className="text-lg font-bold">MR STETH YEBOAH OCRAN</p>
                   <p className="text-lg">CEO</p>
                 </div>
               </>
@@ -63,9 +63,9 @@ const Teams = () => {
               <>
                 <img src="image/teams/user2.svg" alt="" className="w-full" />
                 <div>
-                  <p className="text-lg font-bold">Ms Daphne Spencer</p>
+                  <p className="text-lg font-bold">MS DAPHNE SPENCER</p>
                   <p className="text-lg">
-                    Lead Consultant/Advisory Board Member
+                    LEAD CONSULTANT/ADVISORY BOARD MEMEBER
                   </p>
                 </div>
               </>

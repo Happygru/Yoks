@@ -6,7 +6,7 @@ const ProfileOcran = () => {
   return (
     <>
       <div className="w-full">
-        <BreadCrumb title="Ms DAPHNE SPENCER">
+        <BreadCrumb title="MS DAPHNE SPENCER">
           LEAD CONSULTANT/ADVISORY BOARD MEMBER YOKS RENT A CAR
         </BreadCrumb>
       </div>
@@ -69,7 +69,7 @@ const ProfileOcran = () => {
             <div className="col-span-2 sm:px-[5%] md:px-[10%] lg:px-[15%]">
               <ProfileCard
                 img="user2.svg"
-                name="Mr Seth Yeboah Ocran"
+                name="Ms DAPHNE SPENCER"
                 addr="info@yoksghana.com"
               />
             </div>

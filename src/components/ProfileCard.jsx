@@ -6,7 +6,7 @@ const ProfileCard = (props) => {
   return (
     <div className="bg-white shadow-md rounded-md p-5 w-full">
       <img className="w-full" alt="" src={`image/teams/${img}`} />
-      <p className="text-xl text-[var(--text-color)] text-center mt-3 font-semibold">
+      <p className="text-xl text-[var(--text-color)] text-center mt-3 font-semibold uppercase">
         {name}
       </p>
       <div className="w-full border-t border-gray-300 divide-y divide-gray-300 mt-3">
