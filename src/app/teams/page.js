@@ -41,56 +41,56 @@ const Teams = () => {
       </div>
       <div className="w-full">
         <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 pb-8">
-          <div className="flex flex-col col-span-1 gap-6">
+          <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
             <img src="image/teams/user1.svg" alt="" className="w-full" />
             <div>
               <p className="text-lg font-bold">Mr Steth Yeboah Ocran</p>
               <p className="text-lg">CEO</p>
             </div>
           </div>
-          <div className="flex flex-col col-span-1 gap-6">
+          <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
             <img src="image/teams/user2.svg" alt="" className="w-full" />
             <div>
               <p className="text-lg font-bold">Ms Daphne Spencer</p>
               <p className="text-lg">Lead Consultant/Advisory Board Member</p>
             </div>
           </div>
-          <div className="flex flex-col col-span-1 gap-6">
+          <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
             <img src="image/teams/user3.svg" alt="" className="w-full" />
             <div>
               <p className="text-lg font-bold">CHARLES OKYERE</p>
               <p className="text-lg">QCT COORDINATOR</p>
             </div>
           </div>
-          <div className="flex flex-col col-span-1 gap-6">
+          <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
             <img src="image/teams/user4.svg" alt="" className="w-full" />
             <div>
               <p className="text-lg font-bold">EMMANUEL ATU OCRAN</p>
               <p className="text-lg">ACCOUNTS PAYABLE COORDINATOR</p>
             </div>
           </div>
-          <div className="flex flex-col col-span-1 gap-6">
+          <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
             <img src="image/teams/user5.svg" alt="" className="w-full" />
             <div>
               <p className="text-lg font-bold">GEORGE SIMPSON</p>
               <p className="text-lg">CLIENT RELATIONS COORDINATOR</p>
             </div>
           </div>
-          <div className="flex flex-col col-span-1 gap-6">
+          <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
             <img src="image/teams/user6.svg" alt="" className="w-full" />
             <div>
               <p className="text-lg font-bold">VIVIAN ARMAH</p>
               <p className="text-lg">SALES & MARKETING COORDINATOR</p>
             </div>
           </div>
-          <div className="flex flex-col col-span-1 gap-6">
+          <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
             <img src="image/teams/user7.svg" alt="" className="w-full" />
             <div>
               <p className="text-lg font-bold">CYRIL BOE JNR</p>
               <p className="text-lg">HR/ADMIN COORDINATOR</p>
             </div>
           </div>
-          <div className="flex flex-col col-span-1 gap-6">
+          <div className="flex flex-col col-span-1 gap-6 cursor-pointer">
             <img src="image/teams/user8.svg" alt="" className="w-full" />
             <div>
               <p className="text-lg font-bold">Ms Daphne Spencer</p>

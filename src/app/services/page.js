@@ -17,6 +17,7 @@ const Services = () => {
               img="thumbnail1.svg"
               title="Chauffeur Driven Day Trips"
               text="Our most popular car rental service which includes the vehicle of your choice"
+              url="service_chauffaeur"
             />
           </div>
           <div className="col-span-1">
@@ -24,6 +25,7 @@ const Services = () => {
               img="thumbnail2.svg"
               title="Self-Drive options:"
               text="This service is the self-drive car rental option of YOKS."
+              url="service_selfdrive"
             />
           </div>
           <div className="col-span-1">
@@ -31,6 +33,7 @@ const Services = () => {
               img="thumbnail3.svg"
               title="Corporate Fleet Management"
               text="Over the years we have built the technical capacity and managerial competencies in fleet management"
+              url="service_corperatefleet"
             />
           </div>
           <div className="col-span-1">
@@ -38,6 +41,7 @@ const Services = () => {
               img="thumbnail4.svg"
               title="YOKS Shuttle Services"
               text="Whether you need to be picked up from the airport, home, school, your workers and safely transported"
+              url="service_shuttle"
             />
           </div>
           <div className="col-span-1">
@@ -45,6 +49,7 @@ const Services = () => {
               img="thumbnail5.svg"
               title="Driver Personnel Outsourcing"
               text="we have a talented pool of drivers to staff any position for short and long term."
+              url="service_driverpersonnel"
             />
           </div>
           <div className="col-span-1">
@@ -52,6 +57,7 @@ const Services = () => {
               img="thumbnail6.svg"
               title="YOKS Special Events ticketing"
               text="Ay YOKS we host events, as well as serve as special events ticket portal. for all your event needs."
+              url="service_eventticketing"
             />
           </div>
           <div className="col-span-1">
@@ -66,13 +72,15 @@ const Services = () => {
               img="thumbnail8.svg"
               title="YOKS Tours Packages"
               text="We have great packages tailored to suit your travel and tourism needs throughout the country."
+              url="service_tourpackages"
             />
           </div>
           <div className="col-span-1">
             <ServiceCard
               img="thumbnail9.svg"
-              title="Chauffeur Driven Day Trips"
-              text="Our most popular car rental service which includes the vehicle of your choice"
+              title="Meet and Greet/Visa Arrangement"
+              text=" Processing travel documentation and immigration forms, assist personnel with check-In arrangements at the Airport"
+              url="service_meet"
             />
           </div>
         </div>
