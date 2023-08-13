@@ -15,7 +15,7 @@ const Teams = () => {
           <h1 className="text-[44px] font-semibold">
             Meet Our team of Experts
           </h1>
-          <div className="w-full mt-6 text-2xl leading-10 md:px-[10%] lg:px-[15%]">
+          <div className="w-full mt-6 text-2xl leading-10 md:px-[10%] lg:px-[15%] font-text">
             <p>
               YOKS management team is headed by its CEO and Chairman Mr. Seth
               Yeboah Ocran; however, management as a company culture begins from
@@ -161,7 +161,7 @@ const Teams = () => {
         <div className="max-w-[1280px] w-[90%] m-auto text-center">
           <h1 className="text-[44px] font-semibold">External Consultant</h1>
           <div className="w-full mt-6 text-2xl leading-10 md:px-[10%] lg:px-[15%]">
-            <p>
+            <p className="font-text">
               In addition to its management, YOKS has employed the services of
               external professional consultants to enhance management functions
               in the areas of corporate governance, compliance, financial

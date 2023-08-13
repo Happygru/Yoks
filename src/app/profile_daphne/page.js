@@ -17,7 +17,7 @@ const ProfileOcran = () => {
               <h1 className="text-2xl border-b-2 border-[var(--text-color)] mt-1 font-semibold w-max pb-2">
                 Biography
               </h1>
-              <p className="mt-4">
+              <p className="mt-4 font-text">
                 Recently named one of Africa’s top 100 most powerful in
                 Hospitality by International Hospitality Institute, USA. Having
                 worked with globally recognizable brands such as Walt Disney

@@ -37,13 +37,13 @@ const DriverPersonal = () => {
           <h1 className="text-[44px] text-[var(--text-color)]">
             Welcome to Driver Personnel Outsourcing Services!
           </h1>
-          <p className="text-[var(--text-color)] mt-6">
+          <p className="text-[var(--text-color)] mt-6 font-text">
             Our company is dedicated to providing top-notch driver personnel
             outsourcing services to businesses of all sizes. With our highly
             skilled and experienced drivers, we ensure that you area served on
             time, every time.
           </p>
-          <p className="text-[var(--text-color)] mt-6">
+          <p className="text-[var(--text-color)] mt-6 font-text">
             We understand the importance of having a reliable and efficient
             transportation system in place, especially in today&apos;s
             fast-paced business environment. That&apos;s why we have a team of
@@ -55,7 +55,7 @@ const DriverPersonal = () => {
             className="w-full mt-6"
             alt=""
           />
-          <div className="text-[var(--text-color)] mt-6">
+          <div className="text-[var(--text-color)] mt-6 font-text">
             we believe in providing our clients with the highest level of
             customer service. Our team of experts is always available to assist
             you with any questions or concerns that you may have.{" "}

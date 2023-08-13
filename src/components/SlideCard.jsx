@@ -25,7 +25,7 @@ const SlideCard = () => {
         <div className="p-8 bg-white rounded-md w-full flex flex-col gap-4 pt-10 h-[260px]">
           <p className="text-lg">Kit Payne</p>
           <p className="text-sm">Business Travel Consultant</p>
-          <p className="text-lg font-semibold top-6">
+          <p className="text-lg font-semibold top-6 font-text">
             Thank you all so much for arranging these cars. My client is very
             delighted you could book all these cars for her
           </p>
@@ -35,7 +35,7 @@ const SlideCard = () => {
           <p className="text-sm">
             <br />
           </p>
-          <p className="text-lg font-semibold top-6">
+          <p className="text-lg font-semibold top-6 font-text">
             The car was good, the driver was great. I want to rebook him for
             tomorrow. Same car, same driver
           </p>
@@ -45,7 +45,7 @@ const SlideCard = () => {
           <p className="text-sm">
             <br />
           </p>
-          <p className="text-lg font-semibold top-6">
+          <p className="text-lg font-semibold top-6 font-text">
             I enjoyed all my rides. Thank you so much for a seamless service and
             remembering my name on the second day.
           </p>
@@ -55,7 +55,7 @@ const SlideCard = () => {
           <p className="text-sm">
             <br />
           </p>
-          <p className="text-lg font-semibold top-6">
+          <p className="text-lg font-semibold top-6 font-text">
             I liked your services very much. Nothing to complain about. See you
             again when next I am in Ghana
           </p>
@@ -65,7 +65,7 @@ const SlideCard = () => {
           <p className="text-sm">
             <br />
           </p>
-          <p className="text-lg font-semibold top-6">
+          <p className="text-lg font-semibold top-6 font-text">
             Excellent drivers. Very professional.
           </p>
         </div>
@@ -74,7 +74,7 @@ const SlideCard = () => {
           <p className="text-sm">
             <br />
           </p>
-          <p className="text-lg font-semibold top-6">
+          <p className="text-lg font-semibold top-6 font-text">
             Our delegation was very happy with your service and professionalism
             from the drivers. They spoke very highly of your driver. They said
             he was efficient and professional. It was a pleasure working with

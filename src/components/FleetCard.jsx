@@ -15,8 +15,8 @@ const FleetCard = (props) => {
       <h1 className="text-[var(--text-color)] font-semibold text-[20px]">
         Compact Sedab Cars
       </h1>
-      <p className="text-[var(--text-color)] text-lg">
-        Sedab and it is powered by 1.4 litre naturally aspirated four-cylinder
+      <p className="text-[var(--text-color)] text-lg font-text">
+        Sedan and it is powered by 1.4 litre naturally aspirated four-cylinder
         engine, six speed manual gearbox
       </p>
       <div>

@@ -15,7 +15,7 @@ const ProfileOcran = () => {
               <h1 className="text-2xl border-b-2 border-[var(--text-color)] mt-1 font-semibold w-max pb-2">
                 Biography
               </h1>
-              <p className="mt-4">
+              <p className="mt-4 font-text">
                 Mr. Charles Okyere Darko has direct supervisory responsibility
                 for the driver’s staff and the fleet management team. Thus, Mr.
                 Darko is the key management person responsible for the

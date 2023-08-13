@@ -17,7 +17,7 @@ const ProfileOcran = () => {
               <h1 className="text-2xl border-b-2 border-[var(--text-color)] mt-1 font-semibold w-max pb-2">
                 Biography
               </h1>
-              <p className="mt-4">
+              <p className="mt-4 font-text">
                 Mr. Solomon Edziah functions as the IT/System Admin for YOKS.
                 Mr. Edziah is the initial point of contact with end users
                 reporting faults and requesting IT support. Additionally, he is

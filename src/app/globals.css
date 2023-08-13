@@ -16,6 +16,15 @@
   src: url("../assets/fonts/TitilliumWeb-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Regular.ttf");
+}
+
+.font-text, .font-text * {
+  font-family: "Lato" !important;
+}
+
 *:not(i) {
   font-family: 'Titillium Web';
 }

@@ -92,7 +92,7 @@ const ShuttleService = () => {
             </div>
             <div className="cols-span-1 flex flex-col justify-center items-center">
               <h1 className="text-[44px] font-semibold">Airport Transfers</h1>
-              <p className="text-[var(--text-color)]">
+              <p className="text-[var(--text-color)] font-text">
                 Our airport shuttle service provides a convenient and
                 stress-free way to get to and from the airport. We offer pick-up
                 and drop-off services from all major airports, including JFK,
@@ -105,7 +105,7 @@ const ShuttleService = () => {
               <h1 className="text-[44px] font-semibold">
                 Corporate Shuttle Services
               </h1>
-              <p className="text-[var(--text-color)]">
+              <p className="text-[var(--text-color)] font-text">
                 For businesses, we provide professional and efficient corporate
                 shuttle services. Our team of drivers is knowledgeable and
                 friendly, ensuring that your employees are transported to their
@@ -130,7 +130,7 @@ const ShuttleService = () => {
             </div>
             <div className="cols-span-1 flex flex-col justify-center items-center">
               <h1 className="text-[44px] font-semibold">Group Tours</h1>
-              <p className="text-[var(--text-color)]">
+              <p className="text-[var(--text-color)] font-text">
                 Our group tour shuttle services offer a convenient and
                 cost-effective way to travel. We can accommodate groups of any
                 size and provide customized tours to meet your specific needs.

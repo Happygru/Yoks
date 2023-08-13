@@ -37,14 +37,14 @@ const EventTicketing = () => {
           <h1 className="text-[44px] text-[var(--text-color)] font-semibold">
             Welcome to the Event Ticketing Services
           </h1>
-          <p className="text-[var(--text-color)] mt-6">
+          <p className="text-[var(--text-color)] mt-6 font-text">
             Our event ticketing services offer a convenient and hassle-free way
             to book your tickets for all types of events. Whether it&apos;s a
             music festival, sports event, or theater performance, we have you
             covered. Our platform provides a one-stop-shop for all your
             ticketing needs, so you can focus on enjoying the event.
           </p>
-          <p className="text-[var(--text-color)] mt-6">
+          <p className="text-[var(--text-color)] mt-6 font-text">
             Our event ticketing services offer a convenient and hassle-free way
             to book your tickets for all types of events. Whether it&apos;s a
             music festival, sports event, or theater performance, we have you

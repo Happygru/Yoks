@@ -45,7 +45,7 @@ const Meet = () => {
             <h1 className="text-[44px] text-[var(--text-color)]">
               Security Escort Services
             </h1>
-            <p className="text-[var(--text-color)] mt-4">
+            <p className="text-[var(--text-color)] mt-4 font-text">
               ur high value clients who may need a little extra security are
               provided for based on formal request from our clients for all
               travels and personnel protection. A standard escort team shall

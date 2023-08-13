@@ -37,7 +37,7 @@ const Corperatefleet = () => {
           <h1 className="text-[44px] text-[var(--text-color)]">
             Corporate Fleet Management
           </h1>
-          <p className="text-[var(--text-color)] mt-6">
+          <p className="text-[var(--text-color)] mt-6 font-text">
             Over the years we have built the technical capacity and managerial
             competencies in fleet management, and this is what we seek to put at
             the disposal of your organization to assist in delivering its brand
@@ -65,7 +65,7 @@ const Corperatefleet = () => {
             Our Services:
           </h1>
           <div className="text-[var(--text-color)]">
-            <ul className="list-disc pl-7">
+            <ul className="list-disc pl-7 font-text">
               <li>
                 Vehicle Maintenance: We handle all the maintenance needs of your
                 vehicles, from regular check-ups to emergency repairs. Our team

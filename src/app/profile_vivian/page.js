@@ -17,7 +17,7 @@ const ProfileOcran = () => {
               <h1 className="text-2xl border-b-2 border-[var(--text-color)] mt-1 font-semibold w-max pb-2">
                 Biography
               </h1>
-              <p className="mt-4">
+              <p className="mt-4 font-text">
                 Mrs. Vivian Armah, as the Sales & Marketing Coordinator,
                 coordinates closely with the Client Relations Coordinator to
                 achieve and maintain acceptable customer experience. Her duties

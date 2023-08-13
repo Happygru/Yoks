@@ -15,7 +15,7 @@ const ProfileOcran = () => {
               <h1 className="text-2xl border-b-2 border-[var(--text-color)] mt-1 font-semibold w-max pb-2">
                 Biography
               </h1>
-              <p className="mt-4">
+              <p className="mt-4 font-text">
                 Mr. Cyril Boe Jnr, as the HR/Admin Coordinator, has an important
                 role at YOKS. His duty and responsibility is to provide HR
                 support for all YOKS staff including the CEO. Specifically, he

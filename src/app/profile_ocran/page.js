@@ -20,7 +20,7 @@ const ProfileOcran = () => {
               <h1 className="text-2xl border-b-2 border-[var(--text-color)] mt-1 font-semibold w-max pb-2">
                 Biography
               </h1>
-              <p className="mt-4">
+              <p className="mt-4 font-text">
                 Seth created YOKS Investment Limited in 2001 as a sole
                 proprietorship with just one car. Seth drove and managed Yoks
                 with a single-minded vision to become the reliable car rental

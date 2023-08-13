@@ -17,7 +17,7 @@ const ProfileOcran = () => {
               <h1 className="text-2xl border-b-2 border-[var(--text-color)] mt-1 font-semibold w-max pb-2">
                 Biography
               </h1>
-              <p className="mt-4">
+              <p className="mt-4 font-text">
                 Mr. George Simpson’s role as Client Relations Coordinator
                 focuses on building relationships with clients to ensure that
                 their needs are met—for a satisfactory Customer Experience. His

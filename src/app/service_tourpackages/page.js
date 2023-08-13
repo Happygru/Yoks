@@ -37,7 +37,7 @@ const TourPackages = () => {
           <h1 className="text-[44px] text-[var(--text-color)] font-semibold">
             Welcome to Our Tour Packages Add-On
           </h1>
-          <p className="text-[var(--text-color)] mt-6">
+          <p className="text-[var(--text-color)] mt-6 font-text">
             Enhance your vehicle booking experience with our tour packages.
             Explore new destinations, experience local culture and create
             unforgettable memories with ease and comfort. Whether you are a solo
@@ -47,7 +47,7 @@ const TourPackages = () => {
           <h2 className="text-2xl font-semibold mt-7">
             Why Choose Our Tour Packages?
           </h2>
-          <div className="flex flex-col gap-4 mt-8 text-base">
+          <div className="flex flex-col gap-4 mt-8 text-base font-text">
             <div className="flex items-center gap-6">
               <div className="bg-[#FDEEEC] rounded-full p-2">
                 <FiCheck className="text-[#E95440]" />
@@ -124,7 +124,7 @@ const TourPackages = () => {
             </div>
             <div className="col-span-1">
               <img
-                src="image/services/tourpackages_thumbnail4.svg"
+                src="image/services/tourpackages_thumbnail4.png"
                 className="w-full"
                 alt=""
               />

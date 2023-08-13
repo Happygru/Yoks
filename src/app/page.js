@@ -24,7 +24,7 @@ const Home = () => {
       <div className="relative w-full">
         <div className="absolute top-0 z-10 w-full h-full bg-black/30">
           <div className="max-w-[1280px] w-[90%] h-full m-auto grid grid-rows-2 relative">
-            <div className="row-span-1">
+            <div className="row-span-1 hidden md:block">
               <div className="flex items-center justify-end w-full h-full">
                 {/* <RButton isradius={true} data-aos="fade-down">
                   <span className="flex items-center gap-4 px-10">
@@ -34,12 +34,12 @@ const Home = () => {
                 </RButton> */}
               </div>
             </div>
-            <div className="row-span-1">
+            <div className="row-span-2 md:row-span-1 flex md:block items-center">
               <p
                 className="text-white font-bold text-[26px] md:text-[38px] lg:text-[46px] xl:text-[52px] w-full md:w-2/3"
                 data-aos="fade-up"
               >
-                Your preferred choice for safety and reliability on the road
+                We are your Reliable Choice for Safety and Comfort on the Road
               </p>
             </div>
           </div>
@@ -121,13 +121,13 @@ const Home = () => {
             data-aos="fade-up"
             data-aos-duration="150"
           >
-            <p>
+            <p className="font-text">
               YOKS RENT - A - CAR&apos;s VALUE PROPOSITION is to provide
               solutions in transportation, by providing clients with the desired
               options of services and vehicles, to managing to client&apos;s
               transportation and logistics needs.
             </p>
-            <p>
+            <p className="font-text">
               YOKS offers clients and customers a range of services cantered
               around providing transportation management solutions in the areas
               of:
@@ -141,17 +141,19 @@ const Home = () => {
         </div>
         <div className="col-span-1 p-24 flex justify-center flex-col">
           <h1 className="text-[44px] font-semibold">Airport Pickup</h1>
-          <p className="my-8">
+          <p className="my-8 font-text">
             Our airport shuttle service provides a convenient and stress-free
             way to get to and from the airport. We offer pick-up and drop-off
             services from all major airports, including JFK, LaGuardia, and
             Newark Liberty International.
           </p>
           <RButton isradius={true}>
-            <p className="flex items-center gap-4">
-              <span className="text-base">More Detail</span>
-              <BsArrowUpRight />
-            </p>
+            <Link href="/service_shuttle" className="w-full">
+              <p className="flex items-center gap-4">
+                <span className="text-base">More Detail</span>
+                <BsArrowUpRight />
+              </p>
+            </Link>
           </RButton>
         </div>
       </div>
@@ -199,7 +201,7 @@ const Home = () => {
               className="rounded-md"
               alt=""
             />
-            <p>Elmina</p>
+            <p className="font-text">Elmina</p>
           </div>
           <div className="col-span-1 flex flex-col gap-4 items-center">
             <img
@@ -207,7 +209,7 @@ const Home = () => {
               className="rounded-md"
               alt=""
             />
-            <p>Larabanga mosque</p>
+            <p className="font-text">Larabanga mosque</p>
           </div>
           <div className="col-span-1 flex flex-col gap-4 items-center">
             <img
@@ -215,15 +217,15 @@ const Home = () => {
               className="rounded-md"
               alt=""
             />
-            <p>Axim</p>
+            <p className="font-text">Axim</p>
           </div>
           <div className="col-span-1 flex flex-col gap-4 items-center">
             <img
-              src="image/services/tourpackages_thumbnail4.svg"
+              src="image/services/tourpackages_thumbnail4.png"
               className="rounded-md"
               alt=""
             />
-            <p>Aburl botanical garden</p>
+            <p className="font-text">Aburi botanical garden</p>
           </div>
         </div>
         <img src="image/home/discover_yoks.svg" alt="" className="w-full" />
@@ -297,7 +299,7 @@ const Home = () => {
             data-aos="fade-up"
             data-duration="200"
           >
-            <p className="text-[40px] font-semibold">
+            <p className="text-[40px] font-semibold font-text">
               Hear what our amazing customers say
             </p>
             <p>

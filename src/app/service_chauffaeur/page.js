@@ -37,7 +37,7 @@ const serviceChauffaeur = () => {
           <h1 className="text-[44px] font-semibold">
             Chauffaeur Driven Day Trip
           </h1>
-          <p className="mt-8 text-base">
+          <p className="mt-8 text-base font-text">
             Our most popular car rental service which includes the vehicle of
             your choice with a driver within Accra or outside Accra. Terms &
             Conditions apply.
@@ -90,7 +90,7 @@ const serviceChauffaeur = () => {
               <h1 className="text-[44px] font-semibold">
                 Professional Drivers{" "}
               </h1>
-              <p className="text-[var(--text-color)]">
+              <p className="text-[var(--text-color)] font-text">
                 Chauffeurs are wil trained with the industry standard to met all
                 your travelling needs required of them.
               </p>
@@ -101,7 +101,7 @@ const serviceChauffaeur = () => {
               <h1 className="text-[44px] font-semibold">
                 Safe and comfortable vehicles
               </h1>
-              <p className="text-[var(--text-color)]">
+              <p className="text-[var(--text-color)] font-text">
                 We pride oursellves in the fact that we main tain our cars
                 properly and to meet safety standards.
               </p>

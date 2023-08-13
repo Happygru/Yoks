@@ -17,22 +17,22 @@ const Aboutus = () => {
       <div className="w-full">
         <div className="max-w-[1280px] w-[90%] md:px-[10%] m-auto py-12 font-semibold leading-8 text-center flex flex-col items-center gap-4">
           <h1 className="text-[33px] text-[var(--text-color) pb-8">
-            Your reliable choice for safety and comfort on the road.
+            We are your Reliable Choice for Safety and Comfort on the Road
           </h1>
-          <p className="text-lg text-[var(--text-color)] leading-8">
+          <p className="text-lg text-[var(--text-color)] leading-8 font-text">
             YOKS has been providing professional transportation services over
             the years – since its inception about 22 years ago for Ghana&#39;s
             blue-chip companies, multi-nationals, and individuals. Safety,
             reliability, reputation, and integrity are some of the hallmark
             qualities of YOKS.
           </p>
-          <p className="text-lg text-[var(--text-color)] leading-8">
+          <p className="text-lg text-[var(--text-color)] leading-8 font-text">
             The company has strategically been transformed from its beginnings
             as a sole proprietorship with a one-car-business into a notable main
             player in the industry that offers complete transport management
             services in its market.
           </p>
-          <p className="text-lg text-[var(--text-color)] leading-8">
+          <p className="text-lg text-[var(--text-color)] leading-8 font-text">
             Various awards over the past years give emphasis to the high-quality
             service and competence of YOKS: National Tourism Awards, for Best
             Car Rental Company in 2012 &amp; 2013, Chartered Institute Of

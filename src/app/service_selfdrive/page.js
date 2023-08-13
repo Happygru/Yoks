@@ -80,7 +80,7 @@ const serviceChauffaeur = () => {
               <h1 className="text-[44px] font-semibold">
                 Enjoy the ride with your love one’s
               </h1>
-              <p className="text-[var(--text-color)]">
+              <p className="text-[var(--text-color)] font-text">
                 Choose from our wide variety of rides and take that road trip
                 you have always been wanting to take with your love once.
               </p>
@@ -91,7 +91,7 @@ const serviceChauffaeur = () => {
               <h1 className="text-[44px] font-semibold">
                 Want a ride around the city?
               </h1>
-              <p className="text-[var(--text-color)]">
+              <p className="text-[var(--text-color)] font-text">
                 Yoks got you covered we have all the vehicle types you need to
                 experience Ghana.
               </p>

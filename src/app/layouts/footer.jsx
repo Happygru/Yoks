@@ -28,7 +28,7 @@ const Footer = () => {
               <p className="text-white text-[40px] font-semibold">
                 Download the app
               </p>
-              <p className="text-lg text-white text-semibold">
+              <p className="text-lg text-white text-semibold font-text">
                 Have a personal driver at your fingertips no matter where you
                 are with our easy-to-use smartphone app. Coming Soon
               </p>
@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="grid w-full mt-4">
           <div className="flex flex-col gap-4">
             <p className="text-white text-[40px] font-semibold">Contact Us</p>
-            <p className="text-lg text-white text-semibold">
+            <p className="text-lg text-white text-semibold font-text">
               For Enquires Please get in touch with us and our Staff will be
               glad to assist you
             </p>
@@ -56,17 +56,17 @@ const Footer = () => {
               </p>
               <div className="flex justify-center w-full gap-4 text-lg text-white">
                 <SlLocationPin className="mt-1 text-xl" />
-                <div>
+                <div className="font-text">
                   PMB 72 Osu-Re Accra, Asafoatse Tempong
-                  <p>Street Osu Re Near Tigo Office</p>
+                  <p className="font-text">Street Osu Re Near Tigo Office</p>
                 </div>
               </div>
             </div>
             <div className="flex justify-center  lg:justify-start w-full gap-4 text-lg text-white">
               <LuPhone className="mt-1 text-xl" />
-              <div>
+              <div className="font-text">
                 Tel: +233 596-911-066 ǀ Hotlines +233 540-614-545
-                <p>+233 243-600-277 +233 243-300-493</p>
+                <p className="font-text">+233 243-600-277 +233 243-300-493</p>
               </div>
             </div>
           </div>
@@ -77,16 +77,17 @@ const Footer = () => {
               </p>
               <div className="flex justify-center  lg:justify-start w-full gap-4 text-lg text-white">
                 <SlLocationPin className="mt-1 text-xl" />
-                <div>
-                  PMB CT 343, Independence Ave, <p>Accra Ghana</p>
+                <div className="font-text">
+                  PMB CT 343, Independence Ave,{" "}
+                  <p className="font-text">Accra Ghana</p>
                 </div>
               </div>
             </div>
             <div className="flex justify-center  lg:justify-start w-full gap-4 text-lg text-white">
               <LuPhone className="mt-1 text-xl" />
-              <div>
+              <div className="font-text">
                 Hotlines +233 540-614-545 ǀ +233 243-600-277
-                <p>+233 243-300-493</p>
+                <p className="font-text">+233 243-300-493</p>
               </div>
             </div>
           </div>
@@ -104,7 +105,7 @@ const Footer = () => {
         </div>
         <hr className="my-2" />
         <div className="flex flex-col items-center justify-between w-full gap-8 py-4 font-semibold text-white lg:gap-2 lg:flex-row">
-          <p>© 2023 YOKS RENTAL-A-CAR</p>
+          <p>© 2023 YOKS RENT-A-CAR</p>
           <div className="flex gap-4">
             <Link href="/terms">Terms & Condition</Link>
             <Link href="#">FAQ</Link>
