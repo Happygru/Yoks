@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+"use client";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,6 +10,14 @@ import {
 } from "react-icons/lia";
 
 const SlideCard = () => {
+  const sliderRef = useRef();
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleAfterChange = (current) => {
+    setCurrentSlide(current);
+  };
+
   var settings = {
     dots: false,
     infinite: true,
@@ -17,11 +26,20 @@ const SlideCard = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    afterChange: handleAfterChange,
+  };
+
+  const next = () => {
+    sliderRef.current.slickNext();
+  };
+
+  const prev = () => {
+    sliderRef.current.slickPrev();
   };
 
   return (
     <>
-      <Slider {...settings} className="max-w-[370px] w-full">
+      <Slider {...settings} ref={sliderRef} className="max-w-[370px] w-full">
         <div className="p-8 bg-white rounded-md w-full flex flex-col gap-4 pt-10 h-[260px]">
           <p className="text-lg">Kit Payne</p>
           <p className="text-sm">Business Travel Consultant</p>
@@ -83,13 +101,19 @@ const SlideCard = () => {
         </div>
       </Slider>
       <div className="flex items-center w-full gap-4">
-        <div className="p-3 bg-white rounded-full cursor-pointer w-max">
+        <div
+          className="p-3 bg-white rounded-full cursor-pointer w-max"
+          onClick={prev}
+        >
           <LiaLongArrowAltLeftSolid />
         </div>
-        <div className="p-3 bg-white rounded-full cursor-pointer w-max">
+        <div
+          className="p-3 bg-white rounded-full cursor-pointer w-max"
+          onClick={next}
+        >
           <LiaLongArrowAltRightSolid />
         </div>
-        <p>1/6</p>
+        <p>{currentSlide + 1}/6</p>
       </div>
     </>
   );
