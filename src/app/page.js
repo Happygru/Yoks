@@ -1,23 +1,39 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import RButton from "@/components/RButton";
-import {
-  LiaLongArrowAltLeftSolid,
-  LiaLongArrowAltRightSolid,
-} from "react-icons/lia";
 import { BsArrowUpRight } from "react-icons/bs";
 import ValuesCard from "@/components/ValuesCard";
 import FleetCard from "@/components/FleetCard";
 import SlideCard from "@/components/SlideCard";
 import "aos/dist/aos.css";
+import axios from "axios";
 
 const Home = () => {
+  const [carList, setCarList] = useState([]);
   useEffect(() => {
     AOS.init();
+    getFleetData();
   }, []);
+
+  const getFleetData = () => {
+    axios
+      .get("https://fms.yoksghana.com/api/web/v1/FleetRestController/fleet")
+      .then((res) => {
+        const { categories, vehicles } = res.data;
+
+        const result = categories.slice(0, 3).map((category) => ({
+          ...category,
+          vehicles: vehicles.filter(
+            (vehicle) => vehicle.category === category.id
+          ),
+        }));
+        setCarList(result);
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
@@ -90,10 +106,23 @@ const Home = () => {
               <BsArrowUpRight className="text-base text-[var(--text-color)] font-bold" />
             </span>
           </div>
-          <div className="flex flex-wrap justify-center w-full gap-6 xl:flex-nowrap">
-            <FleetCard data-aos="fade-up" data-aos-duration="150" />
-            <FleetCard data-aos="fade-up" data-aos-duration="250" />
-            <FleetCard data-aos="fade-up" data-aos-duration="350" />
+          <div className="flex flex-wrap justify-center w-full gap-6 xl:flex-nowrap items-stretch">
+            {carList.length > 0 ? (
+              carList.map((item, index) => (
+                <FleetCard
+                  title={item.name}
+                  description={item.description}
+                  passengers={item.vehicles.passengers}
+                  doors={item.vehicles.doors}
+                  luggage={item.vehicles.suitcases}
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-duration="150"
+                />
+              ))
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>
@@ -213,7 +242,7 @@ const Home = () => {
           </div>
           <div className="col-span-1 flex flex-col gap-4 items-center">
             <img
-              src="image/services/tourpackages_thumbnail3.svg"
+              src="image/services/tourpackages_thumbnail3.png"
               className="rounded-md"
               alt=""
             />

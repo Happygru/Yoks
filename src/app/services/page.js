@@ -22,7 +22,7 @@ const Services = () => {
           </div>
           <div className="col-span-1">
             <ServiceCard
-              img="thumbnail2.svg"
+              img="thumbnail2.png"
               title="Self-Drive options:"
               text="This service is the self-drive car rental option of YOKS."
               url="service_selfdrive"

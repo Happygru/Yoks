@@ -7,17 +7,17 @@ import { TbAirConditioning } from "react-icons/tb";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const FleetCard = (props) => {
+  const { title, description, image, passengers, doors, luggage } = props;
   return (
     <div
       {...props}
-      className="p-8 bg-white rounded-md max-w-[370px] w-full flex flex-col gap-4 border border-[#dedede] shadow-lg cursor-pointer"
+      className="p-8 bg-white rounded-md max-w-[370px] w-full flex flex-col gap-4 border border-[#dedede] shadow-lg cursor-pointer h-full"
     >
       <h1 className="text-[var(--text-color)] font-semibold text-[20px]">
-        Compact Sedan Cars
+        {title}
       </h1>
-      <p className="text-[var(--text-color)] text-lg font-text">
-        Sedan and it is powered by 1.4 litre naturally aspirated four-cylinder
-        engine, six speed manual gearbox
+      <p className="text-[var(--text-color)] text-lg font-text h-[84px]">
+        {description}
       </p>
       <div>
         <img src="image/home/fleetcar.png" className="w-full" alt="" />
@@ -27,13 +27,15 @@ const FleetCard = (props) => {
               <div className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full">
                 <ImUsers />
               </div>
-              <p className="text-[var(--text-color)]">Passengers 4</p>
+              <p className="text-[var(--text-color)]">
+                Passengers {passengers}
+              </p>
             </div>
             <div className="flex items-center col-span-1 gap-2">
               <div className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full">
                 <ImLock className="ml-[7px]" />
               </div>
-              <p className="text-[var(--text-color)]">Luggage 2</p>
+              <p className="text-[var(--text-color)]">Luggage {luggage}</p>
             </div>
           </div>
           <div className="grid grid-cols-2">
@@ -55,7 +57,7 @@ const FleetCard = (props) => {
               <div className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full">
                 <GrCar />
               </div>
-              <p className="text-[var(--text-color)]">Doors 4</p>
+              <p className="text-[var(--text-color)]">Doors {doors}</p>
             </div>
             <div className="flex items-center col-span-1">
               <RButton isradius={true}>

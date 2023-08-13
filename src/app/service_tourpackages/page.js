@@ -117,7 +117,7 @@ const TourPackages = () => {
             </div>
             <div className="col-span-1">
               <img
-                src="image/services/tourpackages_thumbnail3.svg"
+                src="image/services/tourpackages_thumbnail3.png"
                 className="w-full"
                 alt=""
               />
