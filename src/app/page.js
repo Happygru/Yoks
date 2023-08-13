@@ -173,8 +173,7 @@ const Home = () => {
           <p className="my-8 font-text">
             Our airport shuttle service provides a convenient and stress-free
             way to get to and from the airport. We offer pick-up and drop-off
-            services from all major airports, including JFK, LaGuardia, and
-            Newark Liberty International.
+            services from all major airports to your destination
           </p>
           <RButton isradius={true}>
             <Link href="/service_shuttle" className="w-full">

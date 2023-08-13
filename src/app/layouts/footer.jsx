@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <p className="text-white text-[40px] font-semibold">Contact Us</p>
             <p className="text-lg text-white text-semibold font-text">
-              For Enquires Please get in touch with us and our Staff will be
+              For inquiries, please get in touch with us and our staff will be
               glad to assist you
             </p>
           </div>
