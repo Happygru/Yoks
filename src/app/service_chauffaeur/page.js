@@ -77,36 +77,42 @@ const serviceChauffaeur = () => {
         </div>
       </div>
       <div className="w-full pb-8">
-        <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-2 gap-16">
-          <div className="cols-span-1">
-            <img
-              src="image/services/chauffaeur_thumbnail1.svg"
-              className="w-full"
-              alt=""
-            />
+        <div className="max-w-[1280px] w-[90%] m-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="cols-span-1">
+              <img
+                src="image/services/chauffaeur_thumbnail1.svg"
+                className="w-full"
+                alt=""
+              />
+            </div>
+            <div className="cols-span-1 flex flex-col justify-center items-center">
+              <h1 className="text-[44px] font-semibold">
+                Professional Drivers{" "}
+              </h1>
+              <p className="text-[var(--text-color)]">
+                Chauffeurs are wil trained with the industry standard to met all
+                your travelling needs required of them.
+              </p>
+            </div>
           </div>
-          <div className="cols-span-1 flex flex-col justify-center items-center">
-            <h1 className="text-[44px] font-semibold">Professional Drivers </h1>
-            <p className="text-[var(--text-color)]">
-              Chauffeurs are wil trained with the industry standard to met all
-              your travelling needs required of them.
-            </p>
-          </div>
-          <div className="cols-span-1 flex flex-col justify-center items-center">
-            <h1 className="text-[44px] font-semibold">
-              Safe and comfortable vehicles
-            </h1>
-            <p className="text-[var(--text-color)]">
-              We pride oursellves in the fact that we main tain our cars
-              properly and to meet safety standards.
-            </p>
-          </div>
-          <div className="cols-span-1">
-            <img
-              src="image/services/chauffaeur_thumbnail2.svg"
-              className="w-full"
-              alt=""
-            />
+          <div className="flex flex-col-reverse mt-6 md:mt-0 md:grid grid-cols-2 gap-16">
+            <div className="cols-span-1 flex flex-col justify-center items-center">
+              <h1 className="text-[44px] font-semibold">
+                Safe and comfortable vehicles
+              </h1>
+              <p className="text-[var(--text-color)]">
+                We pride oursellves in the fact that we main tain our cars
+                properly and to meet safety standards.
+              </p>
+            </div>
+            <div className="cols-span-1">
+              <img
+                src="image/services/chauffaeur_thumbnail2.svg"
+                className="w-full"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>

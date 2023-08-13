@@ -81,55 +81,61 @@ const ShuttleService = () => {
         </div>
       </div>
       <div className="w-full pb-8">
-        <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-2 gap-16">
-          <div className="cols-span-1">
-            <img
-              src="image/services/shuttle_thumbnail1.svg"
-              className="w-full"
-              alt=""
-            />
+        <div className="max-w-[1280px] w-[90%] m-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="cols-span-1">
+              <img
+                src="image/services/shuttle_thumbnail1.svg"
+                className="w-full"
+                alt=""
+              />
+            </div>
+            <div className="cols-span-1 flex flex-col justify-center items-center">
+              <h1 className="text-[44px] font-semibold">Airport Transfers</h1>
+              <p className="text-[var(--text-color)]">
+                Our airport shuttle service provides a convenient and
+                stress-free way to get to and from the airport. We offer pick-up
+                and drop-off services from all major airports, including JFK,
+                LaGuardia, and Newark Liberty International.
+              </p>
+            </div>
           </div>
-          <div className="cols-span-1 flex flex-col justify-center items-center">
-            <h1 className="text-[44px] font-semibold">Airport Transfers</h1>
-            <p className="text-[var(--text-color)]">
-              Our airport shuttle service provides a convenient and stress-free
-              way to get to and from the airport. We offer pick-up and drop-off
-              services from all major airports, including JFK, LaGuardia, and
-              Newark Liberty International.
-            </p>
+          <div className="flex flex-col-reverse mt-6 md:mt-0 md:grid grid-cols-2 gap-16">
+            <div className="cols-span-1 flex flex-col justify-center items-center">
+              <h1 className="text-[44px] font-semibold">
+                Corporate Shuttle Services
+              </h1>
+              <p className="text-[var(--text-color)]">
+                For businesses, we provide professional and efficient corporate
+                shuttle services. Our team of drivers is knowledgeable and
+                friendly, ensuring that your employees are transported to their
+                destinations in a timely and comfortable manner.
+              </p>
+            </div>
+            <div className="cols-span-1">
+              <img
+                src="image/services/shuttle_thumbnail2.png"
+                className="w-full"
+                alt=""
+              />
+            </div>
           </div>
-          <div className="cols-span-1 flex flex-col justify-center items-center">
-            <h1 className="text-[44px] font-semibold">
-              Corporate Shuttle Services
-            </h1>
-            <p className="text-[var(--text-color)]">
-              For businesses, we provide professional and efficient corporate
-              shuttle services. Our team of drivers is knowledgeable and
-              friendly, ensuring that your employees are transported to their
-              destinations in a timely and comfortable manner.
-            </p>
-          </div>
-          <div className="cols-span-1">
-            <img
-              src="image/services/shuttle_thumbnail2.png"
-              className="w-full"
-              alt=""
-            />
-          </div>
-          <div className="cols-span-1">
-            <img
-              src="image/services/shuttle_thumbnail3.png"
-              className="w-full"
-              alt=""
-            />
-          </div>
-          <div className="cols-span-1 flex flex-col justify-center items-center">
-            <h1 className="text-[44px] font-semibold">Group Tours</h1>
-            <p className="text-[var(--text-color)]">
-              Our group tour shuttle services offer a convenient and
-              cost-effective way to travel. We can accommodate groups of any
-              size and provide customized tours to meet your specific needs.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="cols-span-1">
+              <img
+                src="image/services/shuttle_thumbnail3.png"
+                className="w-full"
+                alt=""
+              />
+            </div>
+            <div className="cols-span-1 flex flex-col justify-center items-center">
+              <h1 className="text-[44px] font-semibold">Group Tours</h1>
+              <p className="text-[var(--text-color)]">
+                Our group tour shuttle services offer a convenient and
+                cost-effective way to travel. We can accommodate groups of any
+                size and provide customized tours to meet your specific needs.
+              </p>
+            </div>
           </div>
         </div>
       </div>

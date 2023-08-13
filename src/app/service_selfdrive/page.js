@@ -15,16 +15,7 @@ const serviceChauffaeur = () => {
       </div>
       <div className="relative w-full">
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="max-w-[1280px] w-[90%] h-full relative m-auto">
-            <div className="absolute right-0 top-4 w-max h-max">
-              {/* <RButton isradius={true}>
-                <span className="flex items-center gap-4 px-10">
-                  <FaPlay />
-                  Book Now
-                </span>
-              </RButton> */}
-            </div>
-          </div>
+          <div className="max-w-[1280px] w-[90%] h-full relative m-auto"></div>
         </div>
         <img
           src="image/services/selfdrive_banner.png"
@@ -76,38 +67,42 @@ const serviceChauffaeur = () => {
         </div>
       </div>
       <div className="w-full pb-8">
-        <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-2 gap-16">
-          <div className="cols-span-1">
-            <img
-              src="image/services/selfdrive_thumbnail1.svg"
-              className="w-full"
-              alt=""
-            />
+        <div className="max-w-[1280px] w-[90%] m-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="cols-span-1">
+              <img
+                src="image/services/selfdrive_thumbnail1.svg"
+                className="w-full"
+                alt=""
+              />
+            </div>
+            <div className="cols-span-1 flex flex-col justify-center items-center">
+              <h1 className="text-[44px] font-semibold">
+                Enjoy the ride with your love one’s
+              </h1>
+              <p className="text-[var(--text-color)]">
+                Choose from our wide variety of rides and take that road trip
+                you have always been wanting to take with your love once.
+              </p>
+            </div>
           </div>
-          <div className="cols-span-1 flex flex-col justify-center items-center">
-            <h1 className="text-[44px] font-semibold">
-              Enjoy the ride with your love one’s
-            </h1>
-            <p className="text-[var(--text-color)]">
-              Choose from our wide variety of rides and take that road trip you
-              have always been wanting to take with your love once.
-            </p>
-          </div>
-          <div className="cols-span-1 flex flex-col justify-center items-center">
-            <h1 className="text-[44px] font-semibold">
-              Want a ride around the city?
-            </h1>
-            <p className="text-[var(--text-color)]">
-              Yoks got you covered we have all the vehicle types you need to
-              experience Ghana.
-            </p>
-          </div>
-          <div className="cols-span-1">
-            <img
-              src="image/services/selfdrive_thumbnail2.svg"
-              className="w-full"
-              alt=""
-            />
+          <div className="flex flex-col-reverse mt-6 md:mt-0 md:grid grid-cols-2 gap-16">
+            <div className="cols-span-1 flex flex-col justify-center items-center">
+              <h1 className="text-[44px] font-semibold">
+                Want a ride around the city?
+              </h1>
+              <p className="text-[var(--text-color)]">
+                Yoks got you covered we have all the vehicle types you need to
+                experience Ghana.
+              </p>
+            </div>
+            <div className="cols-span-1">
+              <img
+                src="image/services/selfdrive_thumbnail2.svg"
+                className="w-full"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
