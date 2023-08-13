@@ -20,7 +20,7 @@ const FleetCard = (props) => {
         {description}
       </p>
       <div>
-        <img src="image/home/fleetcar.png" className="w-full" alt="" />
+        <img src={`image/home/${image}`} className="w-full" alt="" />
         <div className="flex flex-col gap-4 pt-2">
           <div className="grid grid-cols-2">
             <div className="flex items-center col-span-1 gap-2">

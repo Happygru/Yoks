@@ -31,6 +31,7 @@ const Home = () => {
           ),
         }));
         setCarList(result);
+        console.log(result);
       })
       .catch((err) => console.log(err));
   };
@@ -112,9 +113,10 @@ const Home = () => {
                 <FleetCard
                   title={item.name}
                   description={item.description}
-                  passengers={item.vehicles.passengers}
-                  doors={item.vehicles.doors}
-                  luggage={item.vehicles.suitcases}
+                  passengers={item.vehicles[0].passengers}
+                  image={`fleetcar${index + 1}.png`}
+                  doors={item.vehicles[0].doors}
+                  luggage={item.vehicles[0].suitcases}
                   key={index}
                   data-aos="fade-up"
                   data-aos-duration="150"
