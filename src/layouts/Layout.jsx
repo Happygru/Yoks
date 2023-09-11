@@ -3,6 +3,8 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import AOS from "aos";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,6 +25,7 @@ const Layout = () => {
       >
         <span className="loader"></span>
       </div>
+      <ToastContainer />
       <Header />
       <div>
         <Outlet />

@@ -1,9 +1,41 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Card } from "@mui/material";
 import { Link } from "react-router-dom";
 import RButton from "../../components/RButton";
 import { BsArrowUpRight } from "react-icons/bs";
+import { signIn } from "../../redux/actions/authAction";
+import { checkPassword, isEmail, toast_options } from "../../utils/constants";
+import { toast } from "react-toastify";
 
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const dispatch = useDispatch();
+
+  const onSignIn = () => {
+    if (!isEmail(email)) {
+      toast.warn("Incorrect your email format", toast_options);
+      return;
+    }
+
+    if (checkPassword(password)) {
+      toast.warn(
+        "The length of the password must be at least 8.",
+        toast_options
+      );
+      return;
+    }
+
+    const postData = {
+      email,
+      password,
+    };
+
+    signIn(dispatch, postData);
+  };
+
   return (
     <>
       <div
@@ -20,11 +52,13 @@ const SignIn = () => {
               type="text"
               className="y_input font-text"
               placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="password"
               className="y_input font-text"
               placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="flex justify-between w-full mt-4">
@@ -44,7 +78,7 @@ const SignIn = () => {
             <Link to="/forgot_password">Forgot your password?</Link>
           </div>
           <div className="mt-16">
-            <RButton isradius={true} isfullwidth={true}>
+            <RButton isradius={true} isfullwidth={true} onClick={onSignIn}>
               <span className="flex w-full justify-center items-center gap-2 px-10">
                 Sign In <BsArrowUpRight className="font-bold" />
               </span>

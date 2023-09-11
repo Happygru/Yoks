@@ -7,7 +7,7 @@ const RButton = (props) => {
     isfullwidth = false,
   } = props;
   return (
-    <div
+    <button
       {...props}
       className={` ${isradius ? "rounded-[6px]" : "rounded-none"} ${
         isfullradius ? "!rounded-full" : ""
@@ -18,7 +18,7 @@ const RButton = (props) => {
       } px-4 py-3 text-white font-semibold cursor-pointer transition-all hover:transition-all select-none text-[18px] `}
     >
       {children}
-    </div>
+    </button>
   );
 };
 
