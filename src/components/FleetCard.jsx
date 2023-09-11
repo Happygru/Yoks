@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import RButton from "./RButton";
 import { ImUsers, ImLock } from "react-icons/im";
 import { GrCar } from "react-icons/gr";
