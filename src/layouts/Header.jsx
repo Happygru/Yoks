@@ -52,7 +52,7 @@ const Header = () => {
             </span>
           </div>
           <RButton isfullradius={true} istransparent={true}>
-            SignIn
+            <Link to="/signin">SignIn</Link>
           </RButton>
           <RButton isfullradius={true} istransparent={false}>
             SignUp
