@@ -4,17 +4,18 @@ const RButton = (props) => {
     isradius = false,
     children,
     istransparent = false,
+    isfullwidth = false,
   } = props;
   return (
     <div
       {...props}
       className={` ${isradius ? "rounded-[6px]" : "rounded-none"} ${
         isfullradius ? "!rounded-full" : ""
-      } ${
+      } ${isfullwidth ? "w-full" : "w-max"} ${
         istransparent
           ? "bg-[rgba(2,66,115,0.18)] hover:bg-[rgba(2,66,115,0.28)]"
           : "bg-[#024273] hover:bg-[rgba(2,66,115,0.9)]"
-      } w-max  px-4 py-3 text-white font-semibold cursor-pointer transition-all hover:transition-all select-none text-[18px] `}
+      } px-4 py-3 text-white font-semibold cursor-pointer transition-all hover:transition-all select-none text-[18px] `}
     >
       {children}
     </div>

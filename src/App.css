@@ -87,9 +87,15 @@ to{transform:rotate(360deg)   }
   .nav_item {
     @apply p-3 cursor-pointer rounded-3xl transition-all hover:bg-[var(--main-color2)] ;
   }
+
+  .y_input {
+    @apply placeholder:text-base placeholder:text-[var(--text-color)] bg-[#F6F6F6] rounded-md p-4 w-full outline-none;
+  }
+
+  .remember_check {
+    @apply w-4 h-4 checked:bg-[#F0FBF7] checked:text-[var(--text-color)] outline-none;
+  }
 }
-
-
 
 /* Dropdown */
 .dropdown {

@@ -14,30 +14,32 @@ const Header = () => {
   return (
     <div className="w-full h-[100px] bg-[var(--main-color1)] py-4">
       <div className="max-w-[1280px] w-[90%] m-auto h-full flex items-center justify-between">
-        <Link href="/" className="w-max">
+        <Link to="/" className="w-max">
           <img src="image/logo.svg" alt="Logo" className="h-full" />
         </Link>
         <nav className="hidden gap-4 text-base font-semibold text-white lg:flex">
-          <Link href="/" className="cursor-pointer nav_item">
+          <Link to="/" className="cursor-pointer nav_item">
             Home
           </Link>
           <div className="dropdown">
-            <button className="dropbtn cursor-pointer nav_item">About Us</button>
+            <button className="dropbtn cursor-pointer nav_item">
+              About Us
+            </button>
             <div className="dropdown-content">
-              <Link href="/aboutus">About Us</Link>
-              <Link href="/teams">Our Team</Link>
+              <Link to="/aboutus">About Us</Link>
+              <Link to="/teams">Our Team</Link>
             </div>
           </div>
-          <Link href="/" className="cursor-pointer nav_item">
+          <Link to="/" className="cursor-pointer nav_item">
             Our Fleet
           </Link>
-          <Link href="/services" className="cursor-pointer nav_item">
+          <Link to="/services" className="cursor-pointer nav_item">
             Services
           </Link>
-          <Link href="/" className="cursor-pointer nav_item">
+          <Link to="/" className="cursor-pointer nav_item">
             Promo
           </Link>
-          <Link href="/contactus" className="cursor-pointer nav_item">
+          <Link to="/contactus" className="cursor-pointer nav_item">
             Contact
           </Link>
         </nav>
@@ -55,7 +57,7 @@ const Header = () => {
             <Link to="/signin">SignIn</Link>
           </RButton>
           <RButton isfullradius={true} istransparent={false}>
-            SignUp
+            <Link to="/signup">SignUp</Link>
           </RButton>
           <span
             className="block text-3xl font-bold text-white cursor-pointer md:hidden"
@@ -74,28 +76,28 @@ const Header = () => {
         <div className="w-full h-full pt-10 bg-[#FDEEEC] relative">
           <img src="image/logo.svg" className="w-48 m-auto" alt="" />
           <nav className="flex flex-col gap-6 text-base font-semibold text-[var(--text-color)] pl-8 pt-8">
-            <Link href="/" className="cursor-pointer">
+            <Link to="/" className="cursor-pointer">
               Home
             </Link>
-            <Link href="#" className="cursor-pointer">
+            <Link to="#" className="cursor-pointer">
               About Us
             </Link>
-            <Link href="/aboutus" className="cursor-pointer pl-4">
+            <Link to="/aboutus" className="cursor-pointer pl-4">
               About Us
             </Link>
-            <Link href="/teams" className="cursor-pointer pl-4">
+            <Link to="/teams" className="cursor-pointer pl-4">
               Our Team
             </Link>
-            <Link href="/ourfleet" className="cursor-pointer">
+            <Link to="/ourfleet" className="cursor-pointer">
               Our Fleet
             </Link>
-            <Link href="/services" className="cursor-pointer">
+            <Link to="/services" className="cursor-pointer">
               Services
             </Link>
-            <Link href="/" className="cursor-pointer">
+            <Link to="/" className="cursor-pointer">
               Promo
             </Link>
-            <Link href="/contactus" className="cursor-pointer">
+            <Link to="/contactus" className="cursor-pointer">
               Contact
             </Link>
           </nav>

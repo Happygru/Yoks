@@ -2,12 +2,16 @@ import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import AOS from "aos";
 
 const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(false);
+    AOS.init();
+    setTimeout(function () {
+      setIsLoading(false);
+    }, 2000);
   }, []);
 
   return (
@@ -20,10 +24,12 @@ const Layout = () => {
         <span className="loader"></span>
       </div>
       <Header />
-      <div><Outlet /></div>
+      <div>
+        <Outlet />
+      </div>
       <Footer />
     </>
   );
-}
+};
 
 export default Layout;
