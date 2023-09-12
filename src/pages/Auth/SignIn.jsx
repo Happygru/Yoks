@@ -63,6 +63,9 @@ const SignIn = () => {
               type="password"
               className="y_input font-text"
               placeholder="Password"
+              onKeyDown={(e) => {
+                if (e.which === 13) onSignIn();
+              }}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
