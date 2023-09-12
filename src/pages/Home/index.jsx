@@ -19,7 +19,7 @@ const Home = () => {
 
   const getFleetData = () => {
     axios
-      .get("https://fms.yoksghana.com/api/web/v1/FleetRestController/fleet")
+      .get("https://test.yoksghana.com/api/web/v1/FleetRestController/fleet")
       .then((res) => {
         const { categories, vehicles } = res.data;
 
@@ -30,7 +30,6 @@ const Home = () => {
           ),
         }));
         setCarList(result);
-        console.log(result);
       })
       .catch((err) => console.log(err));
   };
@@ -98,7 +97,7 @@ const Home = () => {
             </h1>
             <span className="flex items-center gap-2">
               <Link
-                href="#"
+                to="#"
                 className="text-base text-[var(--main-color2)] font-bold"
               >
                 More Fleet
@@ -113,7 +112,7 @@ const Home = () => {
                   title={item.name}
                   description={item.description}
                   passengers={item.vehicles[0].passengers}
-                  image={`fleetcar${index + 1}.png`}
+                  image={item.vehicles[0].image}
                   doors={item.vehicles[0].doors}
                   luggage={item.vehicles[0].suitcases}
                   key={index}

@@ -1,9 +1,13 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
-import dashboardReducer from "./dashboardReducer";
+import globalReducer from "./globalReducer";
+import authReducer from "./authReducer";
+import fleetReducer from "./fleetReducer";
 
 const mainReducer = combineReducers({
-  dashboard: dashboardReducer
-})
+  global: globalReducer,
+  auth: authReducer,
+  fleet: fleetReducer,
+});
 
 export default mainReducer

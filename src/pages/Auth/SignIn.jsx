@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Card } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -7,12 +8,14 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { signIn } from "../../redux/actions/authAction";
 import { checkPassword, isEmail, toast_options } from "../../utils/constants";
 import { toast } from "react-toastify";
+import { SET_LOADING } from "../../redux/type";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const onSignIn = () => {
     if (!isEmail(email)) {
@@ -20,7 +23,7 @@ const SignIn = () => {
       return;
     }
 
-    if (checkPassword(password)) {
+    if (!checkPassword(password)) {
       toast.warn(
         "The length of the password must be at least 8.",
         toast_options
@@ -28,12 +31,14 @@ const SignIn = () => {
       return;
     }
 
+    dispatch({ type: SET_LOADING, payload: true });
+
     const postData = {
       email,
       password,
     };
 
-    signIn(dispatch, postData);
+    signIn(dispatch, postData, navigate);
   };
 
   return (

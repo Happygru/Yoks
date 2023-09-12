@@ -6,13 +6,20 @@ import ForgotPassword from "./pages/Auth/ForgotPassword";
 import ResetPassword from "./pages/Auth/ResetPassword";
 import Teams from "./pages/Teams";
 import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
 import Services from "./pages/Services";
+import OurFleet from "./pages/OurFleet";
+import Booking from "./pages/Booking";
 
 const AppRoutes = [
   {
     path: "/",
     element: <Layout />,
     children: [
+      {
+        path: "/contactus",
+        element: <ContactUs />,
+      },
       {
         path: "/aboutus",
         element: <AboutUs />,
@@ -28,6 +35,14 @@ const AppRoutes = [
       {
         path: "/services",
         element: <Services />,
+      },
+      {
+        path: "/ourfleet",
+        element: <OurFleet />,
+      },
+      {
+        path: "/booking",
+        element: <Booking />,
       },
     ],
   },

@@ -9,7 +9,7 @@ const FleetCard = (props) => {
   return (
     <div
       {...props}
-      className="p-8 bg-white rounded-md max-w-[370px] w-full flex flex-col gap-4 border border-[#dedede] shadow-lg cursor-pointer h-full"
+      className="p-8 bg-white rounded-md max-w-[400px] w-full flex flex-col gap-4 border border-[#dedede] shadow-lg cursor-pointer h-full"
     >
       <h1 className="text-[var(--text-color)] font-semibold text-[20px]">
         {title}
@@ -18,7 +18,7 @@ const FleetCard = (props) => {
         {description}
       </p>
       <div>
-        <img src={`image/home/${image}`} className="w-full" alt="" />
+        <img src={image} className="w-full" alt="" />
         <div className="flex flex-col gap-4 pt-2">
           <div className="grid grid-cols-2">
             <div className="flex items-center col-span-1 gap-2">

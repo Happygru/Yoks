@@ -1,16 +1,28 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import RButton from "../components/RButton";
 import { BsTelephone, BsList } from "react-icons/bs";
 import { TbWorld } from "react-icons/tb";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
+import { LOG_OUT } from "../redux/type";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
+
+  const Logout = () => {
+    dispatch({ type: LOG_OUT, payload: null });
+    navigate("/");
+  };
+
   return (
     <div className="w-full h-[100px] bg-[var(--main-color1)] py-4">
       <div className="max-w-[1280px] w-[90%] m-auto h-full flex items-center justify-between">
@@ -30,7 +42,7 @@ const Header = () => {
               <Link to="/teams">Our Team</Link>
             </div>
           </div>
-          <Link to="/" className="cursor-pointer nav_item">
+          <Link to="/ourfleet" className="cursor-pointer nav_item">
             Our Fleet
           </Link>
           <Link to="/services" className="cursor-pointer nav_item">
@@ -53,14 +65,22 @@ const Header = () => {
               EN
             </span>
           </div>
-          <RButton isfullradius={true} istransparent={true}>
-            <Link to="/signin">SignIn</Link>
-          </RButton>
-          <RButton isfullradius={true} istransparent={false}>
-            <Link to="/signup">SignUp</Link>
-          </RButton>
+          {!isAuthenticated ? (
+            <>
+              <RButton isfullradius={true} istransparent={true}>
+                <Link to="/signin">SignIn</Link>
+              </RButton>
+              <RButton isfullradius={true} istransparent={false}>
+                <Link to="/signup">SignUp</Link>
+              </RButton>
+            </>
+          ) : (
+            <RButton isfullradius={true} istransparent={false} onClick={Logout}>
+              Logout
+            </RButton>
+          )}
           <span
-            className="block text-3xl font-bold text-white cursor-pointer md:hidden"
+            className="block text-3xl font-bold text-white cursor-pointer lg:hidden"
             onClick={toggleDrawer}
           >
             <BsList />

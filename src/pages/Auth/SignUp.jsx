@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import BottomBar from "../../components/BottomBar";
@@ -11,9 +12,11 @@ import { toast } from "react-toastify";
 import { toast_options, isEmail, isPhoneNumber } from "../../utils/constants";
 
 import { signUp } from "../../redux/actions/authAction";
+import { SET_LOADING } from "../../redux/type";
 
 const SignUp = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const MSelect = styled(Select)`
     height: 53px;
@@ -128,8 +131,8 @@ const SignUp = () => {
         password,
       };
     }
-    // onSignUp(dispatch, postData, accountType);
-    signUp(dispatch, postData, accountType.value);
+    dispatch({ type: SET_LOADING, payload: true });
+    signUp(dispatch, postData, accountType.value, navigate);
   };
 
   return (

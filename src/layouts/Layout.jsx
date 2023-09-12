@@ -1,19 +1,25 @@
-import { useState, useEffect } from 'react';
-import { Outlet } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
 import AOS from "aos";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { SET_LOADING } from "../redux/type";
+import { getInfoByToken } from "../redux/actions/authAction";
 
 const Layout = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const isLoading = useSelector((state) => state.global.isLoading);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     AOS.init();
     setTimeout(function () {
-      setIsLoading(false);
+      dispatch({ type: SET_LOADING, payload: false });
     }, 2000);
+    getInfoByToken(dispatch);
   }, []);
 
   return (
