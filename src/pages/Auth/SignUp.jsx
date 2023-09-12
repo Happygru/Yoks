@@ -99,8 +99,18 @@ const SignUp = () => {
       return;
     }
 
+    if (phone.length < 1) {
+      toast.warn("Please input your phonenumber", toast_options);
+      return;
+    }
+
     if (city === "") {
       toast.warn("Incorrect your city", toast_options);
+      return;
+    }
+
+    if (password.length < 1) {
+      toast.warn("Please input your password", toast_options);
       return;
     }
 
@@ -160,170 +170,172 @@ const SignUp = () => {
   };
 
   return (
-    <div className="py-24 max-w-[1280px] w-[90%] m-auto">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2">
-        <div className="col-span-1 sm:min-w-[640px] bg-transparent z-40">
-          <h1 className="text-4xl font-bold text-center">Create Account</h1>
-          <p className="text-md py-4 font-text text-center">
-            Signup for an Account
-          </p>
-          <div className="mt-4 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="col-span-1">
-              <input
-                type="text"
-                className="y_input font-text"
-                placeholder={`${
-                  accountType.value === "Individual"
-                    ? "First Name"
-                    : "Company Name"
-                }`}
-                onChange={(e) => setFirstName(e.target.value)}
-              />
-            </div>
-            {accountType.value === "Individual" ? (
-              <>
-                <div className="col-span-1">
-                  <input
-                    type="text"
-                    className="y_input font-text"
-                    placeholder="Last Name"
-                    onChange={(e) => setLastName(e.target.value)}
-                  />
-                </div>
-                <div className="col-span-1">
-                  <MSelect
-                    options={[
-                      { label: "Male", value: "Male" },
-                      { label: "Female", value: "Female" },
-                    ]}
-                    value={gender}
-                    onChange={setGender}
-                  />
-                </div>
-              </>
-            ) : (
-              <></>
-            )}
-            {accountType.value === "Individual" ? (
-              <div className="col-span-1 flex gap-4 flex-nowrap">
-                <MSelect
-                  options={daysInMonth}
-                  placeholder="Day"
-                  isSearchable
-                  value={day}
-                  onChange={setDay}
-                />
-                <MSelect
-                  options={months}
-                  placeholder="Month"
-                  isSearchable
-                  value={month}
-                  onChange={setMonth}
-                />
-                <MSelect
-                  options={years}
-                  placeholder="Year"
-                  isSearchable
-                  value={year}
-                  onChange={setYear}
+    <div className="w-full">
+      <div className="py-24 max-w-[1280px] w-[90%] m-auto">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2">
+          <div className="col-span-1 sm:min-w-[640px] bg-transparent z-40">
+            <h1 className="text-4xl font-bold text-center">Create Account</h1>
+            <p className="text-md py-4 font-text text-center">
+              Signup for an Account
+            </p>
+            <div className="mt-4 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="col-span-1">
+                <input
+                  type="text"
+                  className="y_input font-text"
+                  placeholder={`${
+                    accountType.value === "Individual"
+                      ? "First Name"
+                      : "Company Name"
+                  }`}
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
-            ) : (
-              <></>
-            )}
-            <div className="col-span-1">
-              <input
-                type="text"
-                className="y_input font-text"
-                placeholder="Email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
+              {accountType.value === "Individual" ? (
+                <>
+                  <div className="col-span-1">
+                    <input
+                      type="text"
+                      className="y_input font-text"
+                      placeholder="Last Name"
+                      onChange={(e) => setLastName(e.target.value)}
+                    />
+                  </div>
+                  <div className="col-span-1">
+                    <MSelect
+                      options={[
+                        { label: "Male", value: "Male" },
+                        { label: "Female", value: "Female" },
+                      ]}
+                      value={gender}
+                      onChange={setGender}
+                    />
+                  </div>
+                </>
+              ) : (
+                <></>
+              )}
+              {accountType.value === "Individual" ? (
+                <div className="col-span-1 flex gap-4 flex-nowrap">
+                  <MSelect
+                    options={daysInMonth}
+                    placeholder="Day"
+                    isSearchable
+                    value={day}
+                    onChange={setDay}
+                  />
+                  <MSelect
+                    options={months}
+                    placeholder="Month"
+                    isSearchable
+                    value={month}
+                    onChange={setMonth}
+                  />
+                  <MSelect
+                    options={years}
+                    placeholder="Year"
+                    isSearchable
+                    value={year}
+                    onChange={setYear}
+                  />
+                </div>
+              ) : (
+                <></>
+              )}
+              <div className="col-span-1">
+                <input
+                  type="text"
+                  className="y_input font-text"
+                  placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="col-span-1">
+                <PhoneInput
+                  value={phone}
+                  onChange={setPhone}
+                  country={"gn"}
+                  placeholder="Enter Phone Number"
+                  className="h-[53px]"
+                  inputClass="!h-[53px] !w-full"
+                />
+              </div>
+              <div className="col-span-1">
+                <MSelect
+                  className="font-text"
+                  options={countries}
+                  value={country}
+                  isSearchable
+                  onChange={setCountry}
+                  placeholder="Country"
+                />
+              </div>
+              <div className="col-span-1">
+                <input
+                  type="text"
+                  className="y_input font-text"
+                  placeholder="City"
+                  onChange={(e) => setCity(e.target.value)}
+                />
+              </div>
+              <div className="col-span-1">
+                <MSelect
+                  options={[
+                    { label: "Individual", value: "Individual" },
+                    { label: "Corporate", value: "Corporate" },
+                  ]}
+                  value={accountType}
+                  onChange={setAccountType}
+                />
+              </div>
+              <div className="col-span-1">
+                <input
+                  type="password"
+                  className={`y_input font-text ${
+                    (password !== confirmPassword ||
+                      !validatePassword(password)) &&
+                    password.length > 0
+                      ? "border border-red-600"
+                      : ""
+                  }`}
+                  placeholder="Password"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              <div className="col-span-1">
+                <input
+                  type="password"
+                  className={`y_input font-text ${
+                    password !== confirmPassword ? "border border-red-600" : ""
+                  }`}
+                  placeholder="Confirm Password"
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+              </div>
             </div>
-            <div className="col-span-1">
-              <PhoneInput
-                value={phone}
-                onChange={setPhone}
-                country={"gn"}
-                placeholder="Enter Phone Number"
-                className="h-[53px]"
-                inputClass="!h-[53px] !w-full"
-              />
-            </div>
-            <div className="col-span-1">
-              <MSelect
-                className="font-text"
-                options={countries}
-                value={country}
-                isSearchable
-                onChange={setCountry}
-                placeholder="Country"
-              />
-            </div>
-            <div className="col-span-1">
-              <input
-                type="text"
-                className="y_input font-text"
-                placeholder="City"
-                onChange={(e) => setCity(e.target.value)}
-              />
-            </div>
-            <div className="col-span-1">
-              <MSelect
-                options={[
-                  { label: "Individual", value: "Individual" },
-                  { label: "Corporate", value: "Corporate" },
-                ]}
-                value={accountType}
-                onChange={setAccountType}
-              />
-            </div>
-            <div className="col-span-1">
-              <input
-                type="password"
-                className={`y_input font-text ${
-                  (password !== confirmPassword ||
-                    !validatePassword(password)) &&
-                  password.length > 0
-                    ? "border border-red-600"
-                    : ""
-                }`}
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div className="col-span-1">
-              <input
-                type="password"
-                className={`y_input font-text ${
-                  password !== confirmPassword ? "border border-red-600" : ""
-                }`}
-                placeholder="Confirm Password"
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="col-span-1 mt-4 text-center flex flex-col gap-4">
+                <RButton isradius={true} isfullwidth={true} onClick={onSignUp}>
+                  <span className="flex w-full justify-center items-center gap-2 px-10">
+                    Create Account <BsArrowUpRight className="font-bold" />
+                  </span>
+                </RButton>
+                <p className="font-text">
+                  Already a member?{" "}
+                  <Link to="/signin" className="text-[#024273]">
+                    Login.
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div className="col-span-1 mt-4 text-center flex flex-col gap-4">
-              <RButton isradius={true} isfullwidth={true} onClick={onSignUp}>
-                <span className="flex w-full justify-center items-center gap-2 px-10">
-                  Create Account <BsArrowUpRight className="font-bold" />
-                </span>
-              </RButton>
-              <p className="font-text">
-                Already a member?{" "}
-                <Link to="/signin" className="text-[#024273]">
-                  Login.
-                </Link>
-              </p>
-            </div>
+          <div className="col-span-1 p-6 flex items-center justify-center">
+            <img
+              src="image/auth/signup_back.png"
+              alt="signup_back"
+              className="w-full"
+            />
           </div>
-        </div>
-        <div className="col-span-1 p-6 flex items-center justify-center">
-          <img
-            src="image/auth/signup_back.png"
-            alt="signup_back"
-            className="w-full"
-          />
         </div>
       </div>
       <BottomBar />

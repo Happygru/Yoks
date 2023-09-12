@@ -19,7 +19,9 @@ const FleetCard = (props) => {
         {description}
       </p>
       <div>
-        <img src={image} className="w-full" alt="" />
+        <div className="w-full h-[calc(150px+5vw)] sm:h-[calc(100px+5vw)] overflow-hidden relative flex items-center justify-center">
+          <img src={image} className="w-full absolute" alt="" />
+        </div>
         <div className="flex flex-col gap-4 pt-2">
           <div className="grid grid-cols-2">
             <div className="flex items-center col-span-1 gap-2">
