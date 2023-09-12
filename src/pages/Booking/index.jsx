@@ -1,22 +1,51 @@
+import { useState } from "react";
 import { PiPoliceCarLight } from "react-icons/pi";
 import { IoMdSwitch } from "react-icons/io";
 import { FiUsers } from "react-icons/fi";
-import { MdPayment } from "react-icons/md";
-import { BsCalendar4Event, BsCheck2 } from "react-icons/bs";
+import { MdPayment, MdCancel } from "react-icons/md";
+import {
+  BsCalendar4Event,
+  BsCheck2,
+  BsShieldFillCheck,
+  BsArrowUpRight,
+} from "react-icons/bs";
+import { IoRibbon } from "react-icons/io5";
+import { BiSolidTimeFive } from "react-icons/bi";
 import BookingStepCard from "../../components/BookingStepCard";
+import RButton from "../../components/RButton";
 import { Card } from "@mui/material";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  DirectionsService,
+  DirectionsRenderer,
+} from "@react-google-maps/api";
 
 const Booking = () => {
+  const [step, setStep] = useState(1);
+
+  const [markers, setMarkers] = useState([]);
+  const [response, setResponse] = useState(null);
+
   const mapStyles = {
-    width: "100%",
     height: "100%",
+    width: "100%",
   };
 
   const defaultCenter = {
     lat: 7.9465,
-    lng: -1.0232, // coordinates for Ghana
+    lng: -1.0232,
   };
+
+  const onMapClick = (e) => {
+    setMarkers([...markers, { lat: e.latLng.lat(), lng: e.latLng.lng() }]);
+  };
+
+  const directionsCallback = (res) => {
+    if (res !== null && res.status === "OK") setResponse(res);
+  };
+
   return (
     <>
       <div className="w-full">
@@ -27,21 +56,104 @@ const Booking = () => {
                 icon={<PiPoliceCarLight />}
                 title="Vehicle"
                 num="01"
-                isActive={true}
+                isActive={step >= 1}
+                onClick={() => setStep(1)}
               />
             </div>
             <div className="col-span-1">
-              <BookingStepCard icon={<IoMdSwitch />} title="Add-On" num="02" />
+              <BookingStepCard
+                icon={<IoMdSwitch />}
+                title="Add-On"
+                num="02"
+                isActive={step >= 2}
+                onClick={() => setStep(2)}
+              />
             </div>
             <div className="col-span-1">
-              <BookingStepCard icon={<FiUsers />} title="Details" num="03" />
+              <BookingStepCard
+                icon={<FiUsers />}
+                title="Details"
+                num="03"
+                isActive={step >= 3}
+                onClick={() => setStep(3)}
+              />
             </div>
             <div className="col-span-1">
-              <BookingStepCard icon={<MdPayment />} title="Payment" num="04" />
+              <BookingStepCard
+                icon={<MdPayment />}
+                title="Payment"
+                num="04"
+                isActive={step === 4}
+                onClick={() => setStep(4)}
+              />
             </div>
           </div>
-          <div className="grid grid-cols-3 py-4 gap-6">
-            <div className="col-span-2"></div>
+          <div className="grid grid-cols-3 py-10 gap-6">
+            <div className="col-span-2">
+              <p className="font-bold text-3xl">Select Your Car</p>
+              <div className="w-full mt-4">
+                <Card className="w-full p-6">
+                  <div className="grid grid-cols-3 divide-x">
+                    <div className="col-span-2 pr-6">
+                      <img
+                        src="image/booking/default.png"
+                        alt="defaultImg"
+                        className="w-full"
+                      />
+                      <div className="grid grid-cols-2 gap-2 mt-2">
+                        <div className="col-span-1 flex gap-2 items-center">
+                          <p className="font-bold text-xl">
+                            <IoRibbon />
+                          </p>
+                          <p>Meet & Greet included</p>
+                        </div>
+                        <div className="col-span-1 flex gap-2 items-center">
+                          <p className="font-bold text-xl">
+                            <MdCancel />
+                          </p>
+                          <p>Free cancellation</p>
+                        </div>
+                        <div className="col-span-1 flex gap-2 items-center">
+                          <p className="font-bold text-xl">
+                            <BiSolidTimeFive />
+                          </p>
+                          <p>Free Waiting time</p>
+                        </div>
+                        <div className="col-span-1 flex gap-2 items-center">
+                          <p className="font-bold text-lg">
+                            <BsShieldFillCheck />
+                          </p>
+                          <p>Safe and secure travel</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-span-1 pl-6">
+                      <div className="w-full flex flex-col gap-8">
+                        <p className="text-xl font-bold">Business Class</p>
+                        <p className="font-text h-[150px]">
+                          Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or
+                          similar
+                        </p>
+                      </div>
+                      <div className="w-full flex flex-col gap-8">
+                        <p className="text-4xl font-bold">$125.25</p>
+                        <p className="font-text">
+                          All prices include VAT, fees & tip.
+                        </p>
+                      </div>
+                      <div className="w-full mt-4">
+                        <RButton isradius={true} isfullwidth={true}>
+                          <span className="flex w-full justify-center items-center gap-2 px-10 font-normal">
+                            Select
+                            <BsArrowUpRight className="font-bold" />
+                          </span>
+                        </RButton>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
             <div className="col-span-1">
               <Card className="p-6">
                 <div className="w-full flex justify-between items-center">
@@ -93,9 +205,25 @@ const Booking = () => {
                   <LoadScript googleMapsApiKey="AIzaSyBeEQgpHcPzV4BwOa60xgE9AwhlofidWh8">
                     <GoogleMap
                       mapContainerStyle={mapStyles}
-                      zoom={6} // you might want to adjust the zoom level
+                      zoom={10}
                       center={defaultCenter}
-                    />
+                      onClick={onMapClick}
+                    >
+                      {markers.map((marker, i) => (
+                        <Marker key={i} position={marker} />
+                      ))}
+                      {markers.length === 2 && (
+                        <DirectionsService
+                          options={{
+                            origin: markers[0],
+                            destination: markers[1],
+                            travelMode: "DRIVING",
+                          }}
+                          callback={directionsCallback}
+                        />
+                      )}
+                      {response && <DirectionsRenderer directions={response} />}
+                    </GoogleMap>
                   </LoadScript>
                 </div>
                 <div className="w-full grid grid-cols-2">
@@ -113,7 +241,7 @@ const Booking = () => {
                   </div>
                 </div>
               </Card>
-              <Card className="p-6 mt-4">
+              <Card className="p-6 mt-8">
                 <div className="w-full flex flex-col gap-4">
                   <div className="w-full flex gap-4">
                     <p className="rounded-full bg-[#F0FBF7] p-2">

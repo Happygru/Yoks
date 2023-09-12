@@ -1,7 +1,9 @@
-const BookingStepCard = ({ icon, title, num, isActive = false }) => {
+const BookingStepCard = (props) => {
+  const { icon, title, num, isActive = false } = props;
   return (
     <>
       <div
+        {...props}
         className={`w-full flex justify-between items-center border-b-2 ${
           isActive ? "border-black hover:bg-gray-300" : "border-[#e5e5e5]"
         } py-8 px-4 cursor-pointer transition-all select-none`}

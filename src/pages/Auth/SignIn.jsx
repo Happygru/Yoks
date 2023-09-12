@@ -6,7 +6,11 @@ import { Link } from "react-router-dom";
 import RButton from "../../components/RButton";
 import { BsArrowUpRight } from "react-icons/bs";
 import { signIn } from "../../redux/actions/authAction";
-import { checkPassword, isEmail, toast_options } from "../../utils/constants";
+import {
+  validatePassword,
+  isEmail,
+  toast_options,
+} from "../../utils/constants";
 import { toast } from "react-toastify";
 import { SET_LOADING } from "../../redux/type";
 
@@ -23,7 +27,7 @@ const SignIn = () => {
       return;
     }
 
-    if (!checkPassword(password)) {
+    if (!validatePassword(password)) {
       toast.warn(
         "The length of the password must be at least 8.",
         toast_options

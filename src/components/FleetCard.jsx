@@ -3,6 +3,7 @@ import { ImUsers, ImLock } from "react-icons/im";
 import { GrCar } from "react-icons/gr";
 import { TbAirConditioning } from "react-icons/tb";
 import { BsArrowUpRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const FleetCard = (props) => {
   const { title, description, image, passengers, doors, luggage } = props;
@@ -59,10 +60,10 @@ const FleetCard = (props) => {
             </div>
             <div className="flex items-center col-span-1">
               <RButton isradius={true}>
-                <span className="flex items-center gap-2">
+                <Link className="flex items-center gap-2" to="/booking">
                   Book Now
                   <BsArrowUpRight />
-                </span>
+                </Link>
               </RButton>
             </div>
           </div>

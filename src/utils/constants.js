@@ -12,8 +12,27 @@ export const isEmail = (email) => {
   return emailRegex.test(email);
 };
 
-export const checkPassword = (password) => {
-  return password.length > 1;
+export const validatePassword = (password) => {
+  // Check password length
+  if (password.length < 9 || password.length > 64) return false;
+
+  const checks = [
+    // Check for uppercase
+    (password) => password.toLowerCase() !== password,
+    // Check for lowercase
+    (password) => password.toUpperCase() !== password,
+    // Check for number
+    (password) => /\d/.test(password),
+    // Check for special character
+    // eslint-disable-next-line no-useless-escape
+    (password) => /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(password),
+  ];
+
+  // Check how many conditions the password meets
+  const validChecks = checks.filter((check) => check(password)).length;
+
+  // Password needs to meet at least two conditions to be valid
+  return validChecks >= 2;
 };
 
 export const toast_options = {

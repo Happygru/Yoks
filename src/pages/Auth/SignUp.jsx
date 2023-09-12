@@ -9,10 +9,17 @@ import Select from "react-select";
 import countryList from "react-select-country-list";
 import styled from "styled-components";
 import { toast } from "react-toastify";
-import { toast_options, isEmail, isPhoneNumber } from "../../utils/constants";
+import {
+  toast_options,
+  isEmail,
+  validatePassword,
+} from "../../utils/constants";
 
 import { signUp } from "../../redux/actions/authAction";
 import { SET_LOADING } from "../../redux/type";
+
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -92,13 +99,30 @@ const SignUp = () => {
       return;
     }
 
-    if (!isPhoneNumber(phone)) {
-      toast.warn("Incorrect your phone format", toast_options);
+    if (city === "") {
+      toast.warn("Incorrect your city", toast_options);
       return;
     }
 
-    if (city === "") {
-      toast.warn("Incorrect your city", toast_options);
+    if (!validatePassword(password)) {
+      toast.info(
+        <>
+          <b>Password must:</b>
+          <ul>
+            <li>Be between 9 and 64 characters</li>
+            <li>
+              <p>Include at least two of the following</p>
+              <ul className="pl-2">
+                <li>- An uppercase character</li>
+                <li>- A lowercase character</li>
+                <li>- A number</li>
+                <li>- A special character</li>
+              </ul>
+            </li>
+          </ul>
+        </>,
+        { ...toast_options, autoClose: 10000 }
+      );
       return;
     }
 
@@ -216,11 +240,13 @@ const SignUp = () => {
               />
             </div>
             <div className="col-span-1">
-              <input
-                type="text"
-                className="y_input font-text"
-                placeholder="Phone"
-                onChange={(e) => setPhone(e.target.value)}
+              <PhoneInput
+                value={phone}
+                onChange={setPhone}
+                country={"gn"}
+                placeholder="Enter Phone Number"
+                className="h-[53px]"
+                inputClass="!h-[53px] !w-full"
               />
             </div>
             <div className="col-span-1">
@@ -230,6 +256,7 @@ const SignUp = () => {
                 value={country}
                 isSearchable
                 onChange={setCountry}
+                placeholder="Country"
               />
             </div>
             <div className="col-span-1">
@@ -254,7 +281,11 @@ const SignUp = () => {
               <input
                 type="password"
                 className={`y_input font-text ${
-                  password !== confirmPassword ? "border border-red-600" : ""
+                  (password !== confirmPassword ||
+                    !validatePassword(password)) &&
+                  password.length > 0
+                    ? "border border-red-600"
+                    : ""
                 }`}
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
