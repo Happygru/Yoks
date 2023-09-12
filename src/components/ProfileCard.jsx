@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 const ProfileCard = (props) => {

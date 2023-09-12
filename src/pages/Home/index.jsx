@@ -137,7 +137,7 @@ const Home = () => {
             </h1>
             <span className="flex items-center gap-2">
               <Link
-                href="#"
+                to="#"
                 className="text-base text-[var(--main-color2)] font-bold"
               >
                 More Services
@@ -176,7 +176,7 @@ const Home = () => {
             services from all major airports to your destination
           </p>
           <RButton isradius={true}>
-            <Link href="/service_shuttle" className="w-full">
+            <Link to="/service_shuttle" className="w-full">
               <p className="flex items-center gap-4">
                 <span className="text-base">More Detail</span>
                 <BsArrowUpRight />

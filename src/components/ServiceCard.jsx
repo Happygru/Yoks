@@ -16,7 +16,7 @@ const ServiceCard = (props) => {
       </div>
       <div>
         <Link
-          href={`/${url}`}
+          to={`/service_detail?name=${url}`}
           className="text-[var(--main-color)] flex gap-4 items-center"
         >
           <span className="text-base">Learn more</span>

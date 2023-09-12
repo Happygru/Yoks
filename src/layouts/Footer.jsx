@@ -105,8 +105,8 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between w-full gap-8 py-4 font-semibold text-white lg:gap-2 lg:flex-row">
           <p>© 2023 YOKS RENT-A-CAR</p>
           <div className="flex gap-4">
-            <Link href="/terms">Terms & Condition</Link>
-            <Link href="#">FAQ</Link>
+            <Link to="/terms">Terms & Condition</Link>
+            <Link to="#">FAQ</Link>
           </div>
           <div className="flex gap-4">
             <RButton isfullradius={true} istransparent={true}>

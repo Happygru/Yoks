@@ -9,7 +9,7 @@ const Aboutus = () => {
     <>
       <div className="w-full">
         <BreadCrumb title="About Us">
-          <Link href="/">Home</Link> - <Link href="#">About Us</Link>
+          <Link to="/">Home</Link> - <Link to="#">About Us</Link>
         </BreadCrumb>
         <img src="image/aboutus/banner.png" className="w-full" alt="" />
       </div>

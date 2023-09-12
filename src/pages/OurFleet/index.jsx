@@ -21,7 +21,7 @@ const OurFleet = () => {
     <>
       <div className="w-full">
         <BreadCrumb title="Our Fleet">
-          <Link href="/">Home</Link> - <Link href="#">Our Fleet</Link>
+          <Link to="/">Home</Link> - <Link to="#">Our Fleet</Link>
         </BreadCrumb>
       </div>
       <div className="w-full">

@@ -1,3 +1,4 @@
+import BottomBar from "../../components/BottomBar";
 import BreadCrumb from "../../components/BreadCrumb";
 import { Link } from "react-router-dom";
 
@@ -6,7 +7,7 @@ const Teams = () => {
     <>
       <div className="w-full">
         <BreadCrumb title="Our Team">
-          <Link href="/">Home</Link> - <Link href="#">Our Team</Link>
+          <Link to="/">Home</Link> - <Link to="#">Our Team</Link>
         </BreadCrumb>
       </div>
       <div className="w-full py-12">
@@ -42,7 +43,7 @@ const Teams = () => {
         <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 pb-8">
           <div className="col-span-1">
             <Link
-              href="/profile_ocran"
+              to="/team_detail?name=ocran"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -56,7 +57,7 @@ const Teams = () => {
           </div>
           <div className="col-span-1">
             <Link
-              href="/profile_daphne"
+              to="/team_detail?name=daphne"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -72,7 +73,7 @@ const Teams = () => {
           </div>
           <div className="col-span-1">
             <Link
-              href="/profile_charles"
+              to="/team_detail?name=charles"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -86,7 +87,7 @@ const Teams = () => {
           </div>
           <div className="col-span-1">
             <Link
-              href="/profile_emmanuel"
+              to="/team_detail?name=emmanuel"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -100,7 +101,7 @@ const Teams = () => {
           </div>
           <div className="col-span-1">
             <Link
-              href="/profile_george"
+              to="/team_detail?name=george"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -114,7 +115,7 @@ const Teams = () => {
           </div>
           <div className="col-span-1">
             <Link
-              href="/profile_vivian"
+              to="/team_detail?name=vivian"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -128,7 +129,7 @@ const Teams = () => {
           </div>
           <div className="col-span-1">
             <Link
-              href="/profile_cyril"
+              to="/team_detail?name=cyril"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -142,7 +143,7 @@ const Teams = () => {
           </div>
           <div className="col-span-1">
             <Link
-              href="/profile_solomon"
+              to="/team_detail?name=solomon"
               className="w-full flex flex-col gap-6 cursor-pointer"
             >
               <>
@@ -169,13 +170,7 @@ const Teams = () => {
           </div>
         </div>
       </div>
-      <div className="w-full">
-        <img
-          src="image/home/footer_illustration.svg"
-          alt=""
-          className="w-full"
-        />
-      </div>
+      <BottomBar />
     </>
   );
 };

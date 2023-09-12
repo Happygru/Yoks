@@ -7,9 +7,11 @@ import ResetPassword from "./pages/Auth/ResetPassword";
 import Teams from "./pages/Teams";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-import Services from "./pages/Services";
 import OurFleet from "./pages/OurFleet";
 import Booking from "./pages/Booking";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/Services/ServiceDetail";
+import TeamDetail from "./pages/Teams/TeamDetail";
 
 const AppRoutes = [
   {
@@ -43,6 +45,14 @@ const AppRoutes = [
       {
         path: "/booking",
         element: <Booking />,
+      },
+      {
+        path: "/service_detail",
+        element: <ServiceDetail />,
+      },
+      {
+        path: "/team_detail",
+        element: <TeamDetail />,
       },
     ],
   },
