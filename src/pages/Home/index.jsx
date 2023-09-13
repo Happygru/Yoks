@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import AOS from "aos";
-import RButton from '../../components/RButton'
+import RButton from "../../components/RButton";
 import { BsArrowUpRight } from "react-icons/bs";
+import { FaPlay } from "react-icons/fa";
 import ValuesCard from "../../components/ValuesCard";
 import FleetCard from "../../components/FleetCard";
 import SlideCard from "../../components/SlideCard";
 import "aos/dist/aos.css";
 import axios from "axios";
 import BottomBar from "../../components/BottomBar";
+import BookingModal from "../../components/BookingModal";
 
 const Home = () => {
+  const [bookingModalVisible, setBookingModalVisible] = useState(false);
   const [carList, setCarList] = useState([]);
   useEffect(() => {
     AOS.init();
@@ -41,12 +44,16 @@ const Home = () => {
           <div className="max-w-[1280px] w-[90%] h-full m-auto grid grid-rows-2 relative">
             <div className="row-span-1 hidden md:block">
               <div className="flex items-center justify-end w-full h-full">
-                {/* <RButton isradius={true} data-aos="fade-down">
+                <RButton
+                  isradius={true}
+                  data-aos="fade-down"
+                  onClick={() => setBookingModalVisible(true)}
+                >
                   <span className="flex items-center gap-4 px-10">
                     <FaPlay />
                     Book Now
                   </span>
-                </RButton> */}
+                </RButton>
               </div>
             </div>
             <div className="row-span-2 md:row-span-1 flex md:block items-center">
@@ -353,6 +360,10 @@ const Home = () => {
         </div>
       </div>
       <BottomBar />
+      <BookingModal
+        visible={bookingModalVisible}
+        setVisible={setBookingModalVisible}
+      />
     </>
   );
 };

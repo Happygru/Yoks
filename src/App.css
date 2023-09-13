@@ -144,3 +144,7 @@ to{transform:rotate(360deg)   }
   border: 3px solid rgba(177, 177, 177, 0.4); /* creates padding around scroll thumb */
   cursor: pointer;
 }
+
+:where(.css-dev-only-do-not-override-18iikkb).ant-btn-primary {
+  background-color: #1677ff !important;
+}
