@@ -53,6 +53,8 @@ export const stringConstant = {
   // State
   success_register: "Success to register",
   failed_register: "Failed to register",
+  success_update: "Success to update",
+  failed_update: "Failed to update",
 
   success_login: "Success to login",
   failed_login: "Failed to login",

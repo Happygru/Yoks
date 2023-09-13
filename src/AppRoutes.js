@@ -1,6 +1,7 @@
 import Layout from "./layouts/Layout";
+import MyAccountLayout from "./layouts/MyAccountLayout";
 import Home from "./pages/Home";
-import SignIn from './pages/Auth/SignIn';
+import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import ResetPassword from "./pages/Auth/ResetPassword";
@@ -12,6 +13,10 @@ import Booking from "./pages/Booking";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/Services/ServiceDetail";
 import TeamDetail from "./pages/Teams/TeamDetail";
+import Dashboard from "./pages/MyAccount/Dashboard";
+import Profile from "./pages/MyAccount/Profile";
+import ChangePassword from "./pages/MyAccount/ChangePassword";
+import MyBooking from "./pages/MyAccount/MyBooking";
 
 const AppRoutes = [
   {
@@ -53,6 +58,28 @@ const AppRoutes = [
       {
         path: "/team_detail",
         element: <TeamDetail />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    element: <MyAccountLayout />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/change_password",
+        element: <ChangePassword />,
+      },
+      {
+        path: "/mybooking",
+        element: <MyBooking />,
       },
     ],
   },

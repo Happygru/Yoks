@@ -61,7 +61,7 @@ export const signIn = (dispatch, postData, navigate) => {
     });
 };
 
-export const getInfoByToken = (dispatch) => {
+export const getInfoByToken = (dispatch, isVerify = false, navigate) => {
   yaxios
     .post(validate_token)
     .then((res) => {
@@ -70,12 +70,15 @@ export const getInfoByToken = (dispatch) => {
           if (getCookie("token").length > 0)
             toast.error(res.data.message, toast_options);
           dispatch({ type: LOG_OUT, payload: null });
+          if (isVerify) navigate("/signin");
         } else {
           dispatch({ type: SIGN_IN, payload: res.data.data.customer });
         }
+        dispatch({ type: SET_LOADING, payload: false });
       } else {
         toast.error(stringConstant.request_error, toast_options);
         dispatch({ type: LOG_OUT, payload: null });
+        if (isVerify) navigate("/signin");
       }
     })
     .catch((err) => {

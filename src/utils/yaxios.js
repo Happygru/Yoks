@@ -8,7 +8,10 @@ const yaxios = axios.create({
 yaxios.interceptors.request.use(
   (config) => {
     let cookie = getCookie("token");
-    config.headers["Content-Type"] = "application/json";
+    config.headers["Content-Type"] =
+      config.data && config.data instanceof FormData
+        ? "multipart/form-data"
+        : "application/json";
     config.headers["Accept"] = "*/*";
     let newcookie = cookie ? cookie : "";
     if (newcookie.length > 0) {

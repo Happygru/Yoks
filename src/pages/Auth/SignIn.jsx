@@ -27,7 +27,7 @@ const SignIn = () => {
       return;
     }
 
-    if (!validatePassword(password)) {
+    if (validatePassword(password)) {
       toast.warn(
         "The length of the password must be at least 8.",
         toast_options

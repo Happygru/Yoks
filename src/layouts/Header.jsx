@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import RButton from "../components/RButton";
 import { BsTelephone, BsList } from "react-icons/bs";
-import { TbWorld } from "react-icons/tb";
+import { TbWorld, TbLogout, TbUserHexagon } from "react-icons/tb";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { LOG_OUT } from "../redux/type";
@@ -11,6 +11,7 @@ import { LOG_OUT } from "../redux/type";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const userdata = useSelector((state) => state.auth.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -75,9 +76,28 @@ const Header = () => {
               </RButton>
             </>
           ) : (
-            <RButton isfullradius={true} istransparent={false} onClick={Logout}>
-              Logout
-            </RButton>
+            <div className="dropdown">
+              {/* <button className="dropbtn cursor-pointer nav_item">
+                About Us
+              </button> */}
+              <RButton
+                isfullradius={true}
+                istransparent={true}
+                className="dropbtn"
+              >
+                <Link>{userdata.name}</Link>
+              </RButton>
+              <div className="dropdown-content">
+                <Link to="/dashboard" className="!flex gap-2 items-center">
+                  <TbUserHexagon className="text-xl" />
+                  <p>My Account</p>
+                </Link>
+                <Link onClick={Logout} className="!flex gap-2 items-center">
+                  <TbLogout className="text-xl" />
+                  <p>Logout</p>
+                </Link>
+              </div>
+            </div>
           )}
           <span
             className="block text-3xl font-bold text-white cursor-pointer lg:hidden"
