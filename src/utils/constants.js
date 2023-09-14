@@ -1,7 +1,5 @@
 import Cookies from "js-cookie";
 
-export const BACKEND_URL = "https://test.yoksghana.com/api/web/v1/";
-
 export const isPhoneNumber = (phoneNumber) => {
   const regex = /^\+(?:[0-9] ?){6,14}[0-9]$/; // regex for international phone numbers
   return regex.test(phoneNumber);
@@ -14,7 +12,7 @@ export const isEmail = (email) => {
 
 export const validatePassword = (password) => {
   // Check password length
-  if (password.length < 9 || password.length > 64) return false;
+  if (password.length < 8 || password.length > 64) return false;
 
   const checks = [
     // Check for uppercase
@@ -48,7 +46,7 @@ export const toast_options = {
 
 export const stringConstant = {
   request_error: "Request Error!",
-  //Auth
+  // Auth
 
   // State
   success_register: "Success to register",
@@ -59,8 +57,11 @@ export const stringConstant = {
   success_login: "Success to login",
   failed_login: "Failed to login",
 
-  //OurFleet
+  // OurFleet
   failed_load_carlist: "Failed to load fleet data",
+
+  // Booking
+  failed_load_vehicles: "Failed to load vehicles data",
 };
 
 export const setCookie = (key, value, expire = { expires: 300000 }) => {

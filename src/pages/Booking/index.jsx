@@ -1,18 +1,12 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { PiPoliceCarLight } from "react-icons/pi";
 import { IoMdSwitch } from "react-icons/io";
 import { FiUsers } from "react-icons/fi";
-import { MdPayment, MdCancel } from "react-icons/md";
-import {
-  BsCalendar4Event,
-  BsCheck2,
-  BsShieldFillCheck,
-  BsArrowUpRight,
-} from "react-icons/bs";
-import { IoRibbon } from "react-icons/io5";
-import { BiSolidTimeFive } from "react-icons/bi";
+import { MdPayment } from "react-icons/md";
+import { BsCalendar4Event, BsCheck2 } from "react-icons/bs";
 import BookingStepCard from "../../components/BookingStepCard";
-import RButton from "../../components/RButton";
+import Vehicle from "./Vehicle";
 import { Card } from "@mui/material";
 import {
   GoogleMap,
@@ -21,8 +15,11 @@ import {
   DirectionsService,
   DirectionsRenderer,
 } from "@react-google-maps/api";
+import { GOOGLE_API_KEY } from "../../utils/config";
 
 const Booking = () => {
+  const book_state = useSelector((state) => state.book);
+
   const [step, setStep] = useState(1);
 
   const [markers, setMarkers] = useState([]);
@@ -90,69 +87,7 @@ const Booking = () => {
           </div>
           <div className="grid grid-cols-3 py-10 gap-6">
             <div className="col-span-2">
-              <p className="font-bold text-3xl">Select Your Car</p>
-              <div className="w-full mt-4">
-                <Card className="w-full p-6">
-                  <div className="grid grid-cols-3 divide-x">
-                    <div className="col-span-2 pr-6">
-                      <img
-                        src="image/booking/default.png"
-                        alt="defaultImg"
-                        className="w-full"
-                      />
-                      <div className="grid grid-cols-2 gap-2 mt-2">
-                        <div className="col-span-1 flex gap-2 items-center">
-                          <p className="font-bold text-xl">
-                            <IoRibbon />
-                          </p>
-                          <p>Meet & Greet included</p>
-                        </div>
-                        <div className="col-span-1 flex gap-2 items-center">
-                          <p className="font-bold text-xl">
-                            <MdCancel />
-                          </p>
-                          <p>Free cancellation</p>
-                        </div>
-                        <div className="col-span-1 flex gap-2 items-center">
-                          <p className="font-bold text-xl">
-                            <BiSolidTimeFive />
-                          </p>
-                          <p>Free Waiting time</p>
-                        </div>
-                        <div className="col-span-1 flex gap-2 items-center">
-                          <p className="font-bold text-lg">
-                            <BsShieldFillCheck />
-                          </p>
-                          <p>Safe and secure travel</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-span-1 pl-6">
-                      <div className="w-full flex flex-col gap-8">
-                        <p className="text-xl font-bold">Business Class</p>
-                        <p className="font-text h-[150px]">
-                          Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS or
-                          similar
-                        </p>
-                      </div>
-                      <div className="w-full flex flex-col gap-8">
-                        <p className="text-4xl font-bold">$125.25</p>
-                        <p className="font-text">
-                          All prices include VAT, fees & tip.
-                        </p>
-                      </div>
-                      <div className="w-full mt-4">
-                        <RButton isradius={true} isfullwidth={true}>
-                          <span className="flex w-full justify-center items-center gap-2 px-10 font-normal">
-                            Select
-                            <BsArrowUpRight className="font-bold" />
-                          </span>
-                        </RButton>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </div>
+              <Vehicle />
             </div>
             <div className="col-span-1">
               <Card className="p-6">
@@ -174,7 +109,9 @@ const Booking = () => {
                     >
                       A
                     </div>
-                    <p className="font-text font-bold">Accra</p>
+                    <p className="font-text font-bold">
+                      {book_state?.pickupLocation.value}
+                    </p>
                   </div>
                   <div className="relative w-full flex items-center gap-4 mt-6 z-10">
                     <div
@@ -186,23 +123,29 @@ const Booking = () => {
                     >
                       B
                     </div>
-                    <p className="font-text font-bold">Kumasi</p>
+                    <p className="font-text font-bold">
+                      {book_state?.dropoffLocation.value}
+                    </p>
                   </div>
                   <div className="w-full flex items-center gap-4">
                     <div className="px-3 py-3 rounded-full bg-[#024273] text-white">
                       <BsCalendar4Event />
                     </div>
-                    <p className="font-text font-bold">Thu, Feb 06, 2023</p>
+                    <p className="font-text font-bold">
+                      {book_state?.startdate.format("MMM DD, YYYY")}
+                    </p>
                   </div>
                   <div className="w-full flex items-center gap-4">
                     <div className="px-3 py-3 rounded-full bg-[#024273] text-white">
                       <BsCalendar4Event />
                     </div>
-                    <p className="font-text font-bold">6 PM : 15</p>
+                    <p className="font-text font-bold">
+                      {book_state?.starttime.format("h:mm A")}
+                    </p>
                   </div>
                 </div>
                 <div className="w-full h-64 rounded-lg overflow-hidden my-10">
-                  <LoadScript googleMapsApiKey="AIzaSyBeEQgpHcPzV4BwOa60xgE9AwhlofidWh8">
+                  <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
                     <GoogleMap
                       mapContainerStyle={mapStyles}
                       zoom={10}

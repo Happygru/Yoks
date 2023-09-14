@@ -1,18 +1,27 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+// React imports
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+// Third Party libraries
 import { Modal, Tabs } from "antd";
 import styled from "styled-components";
-import { FaPlay } from "react-icons/fa";
-import { BsCalendar4Event } from "react-icons/bs";
 import Select from "react-select";
+
+// Icon Imports
+import { BsArrowUpRight, BsCalendar4Event } from "react-icons/bs";
+import { FaPlay } from "react-icons/fa";
+import { LiaShareSolid } from "react-icons/lia";
+import { TbClockShare } from "react-icons/tb";
+
+// Component and utility function imports
 import ButtonDatePicker from "./ButtonDatePicker";
 import ButtonSelect from "./ButtonSelect";
-import { useState } from "react";
-import moment from "moment";
 import ButtonTimePicker from "./ButtonTimePicker";
-import { TbClockShare } from "react-icons/tb";
-import { useEffect } from "react";
+import RButton from "./RButton";
 import { getGhanaCityList } from "../utils/getCities";
-import { LiaShareSolid } from "react-icons/lia";
+import { SET_BOOKING_STEP_1 } from "../redux/type";
 
 const { TabPane } = Tabs;
 
@@ -64,20 +73,38 @@ const BTabs = styled(Tabs)`
 `;
 
 const BookingModal = ({ visible, setVisible }) => {
-  const [wholeDayServiceType, setWholeDayServiceType] = useState({
-    label: "Self-Drive",
-    value: "self-drive",
-  });
 
-  const [startdate, setStartDate] = useState(moment(new Date()));
-  const [starttime, setStartTime] = useState(moment(new Date()));
-  const [enddate, setEndDate] = useState(moment(new Date()));
-  const [endtime, setEndTime] = useState(moment(new Date()));
-  // const [hourlyServiceType, setHourlyService] = useState(1);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const book_state = useSelector(state => state.book);
+  
+  const [serviceType, setServiceType] = useState(book_state?.serviceType);
+  const [serviceHourly, setServiceHourly] = useState(book_state?.serviceHourly);
+  const [startdate, setStartDate] = useState(book_state?.startdate);
+  const [starttime, setStartTime] = useState(book_state?.starttime);
+  const [enddate, setEndDate] = useState(book_state?.enddate);
+  const [endtime, setEndTime] = useState(book_state?.endtime);
+  const [pickupLocation, setPickupLocation] = useState(book_state?.pickupLocation);
+  const [dropoffLocation, setDropoffLocation] = useState(book_state?.dropoffLocation);
 
   const [cityList, setCityList] = useState([]);
 
-  const proceed = () => {};
+  const onProceed = (type) => {
+    const bookingData = {
+      rtype: type,
+      startdate,
+      starttime,
+      enddate,
+      endtime,
+      pickupLocation: pickupLocation,
+      dropoffLocation: dropoffLocation,
+      serviceType: serviceType,
+      serviceHourly: serviceHourly,
+    };
+    dispatch({ type: SET_BOOKING_STEP_1, payload: bookingData });
+    navigate("/booking");
+  };
 
   const handleCancel = () => {
     setVisible(false);
@@ -90,10 +117,6 @@ const BookingModal = ({ visible, setVisible }) => {
     getData();
   }, []);
 
-  useEffect(() => {
-    console.log(cityList);
-  }, [cityList]);
-
   return (
     <BModal
       title={
@@ -104,7 +127,6 @@ const BookingModal = ({ visible, setVisible }) => {
       }
       width={"500px"}
       open={visible}
-      onOk={proceed}
       onCancel={handleCancel}
     >
       <BTabs defaultActiveKey="1">
@@ -117,8 +139,8 @@ const BookingModal = ({ visible, setVisible }) => {
                   { label: "Self-Drive", value: "self-drive" },
                   { label: "Chauffer Drive", value: "chauffeur-driven" },
                 ]}
-                value={wholeDayServiceType}
-                onChange={setWholeDayServiceType}
+                value={serviceType}
+                onChange={setServiceType}
               />
             </div>
             <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
@@ -183,10 +205,108 @@ const BookingModal = ({ visible, setVisible }) => {
             </div>
             <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
               <div className="bg-white rounded-md p-2 flex-grow">
-                <ButtonSelect label={<LiaShareSolid />} options={cityList} />
+                <ButtonSelect
+                  label={<LiaShareSolid />}
+                  options={cityList}
+                  value={pickupLocation}
+                  onOptionChange={setPickupLocation}
+                />
               </div>
               <div className="w-full h-full flex flex-col justify-between">
                 <p className="text-[#333]">PickUp Location</p>
+                <p className="text-[var(--text-color)] font-bold">
+                  {pickupLocation?.value}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
+              <div className="bg-white rounded-md p-2 flex-grow">
+                <ButtonSelect
+                  label={
+                    <LiaShareSolid style={{ transform: "rotateY(180deg)" }} />
+                  }
+                  options={cityList}
+                  value={dropoffLocation}
+                  onOptionChange={setDropoffLocation}
+                />
+              </div>
+              <div className="w-full h-full flex flex-col justify-between">
+                <p className="text-[#333]">DropOff Location</p>
+                <p className="text-[var(--text-color)] font-bold">
+                  {dropoffLocation?.value}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1">
+              <RButton
+                isradius={true}
+                isfullwidth={true}
+                onClick={() => onProceed(2)}
+              >
+                <span className="flex w-full justify-center items-center gap-2 px-10">
+                  Proceed <BsArrowUpRight className="font-bold" />
+                </span>
+              </RButton>
+            </div>
+          </div>
+        </TabPane>
+        <TabPane tab="Hourly" key="2">
+          <div className="grid grid-cols-1 gap-6">
+            <div className="col-span-1">
+              <p className="font-bold pb-2">Service Hourly</p>
+              <Select
+                options={[
+                  { value: 1, label: "1 Hr" },
+                  { value: 2, label: "2 Hr" },
+                  { value: 3, label: "3 Hr" },
+                  { value: 4, label: "4 Hr" },
+                  { value: 5, label: "5 Hr" },
+                  { value: 6, label: "6 Hr" },
+                ]}
+                value={serviceHourly}
+                onChange={setServiceHourly}
+              />
+            </div>
+            <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
+              <div className="bg-white rounded-md p-2 flex-grow">
+                <ButtonDatePicker
+                  onDateChange={(value) => setStartDate(value)}
+                  value={startdate}
+                  icon={<BsCalendar4Event />}
+                />
+              </div>
+              <div className="w-full h-full flex flex-col justify-between">
+                <p className="text-[#333]">Start Date</p>
+                <p className="text-[var(--text-color)] font-bold">
+                  {startdate?.format("MMM DD, YYYY")}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
+              <div className="bg-white rounded-md p-2 flex-grow">
+                <ButtonTimePicker
+                  onTimeChange={(value) => setStartTime(value)}
+                  value={starttime}
+                  icon={<TbClockShare />}
+                />
+              </div>
+              <div className="w-full h-full flex flex-col justify-between">
+                <p className="text-[#333]">Start Time</p>
+                <p className="text-[var(--text-color)] font-bold">
+                  {starttime?.format("h:mm A")}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
+              <div className="bg-white rounded-md p-2 flex-grow">
+                <ButtonDatePicker
+                  onDateChange={(value) => setEndDate(value)}
+                  value={enddate}
+                  icon={<BsCalendar4Event />}
+                />
+              </div>
+              <div className="w-full h-full flex flex-col justify-between">
+                <p className="text-[#333]">End Date</p>
                 <p className="text-[var(--text-color)] font-bold">
                   {enddate?.format("MMM DD, YYYY")}
                 </p>
@@ -201,16 +321,58 @@ const BookingModal = ({ visible, setVisible }) => {
                 />
               </div>
               <div className="w-full h-full flex flex-col justify-between">
-                <p className="text-[#333]">Start Time</p>
+                <p className="text-[#333]">End Time</p>
                 <p className="text-[var(--text-color)] font-bold">
                   {endtime?.format("h:mm A")}
                 </p>
               </div>
             </div>
+            <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
+              <div className="bg-white rounded-md p-2 flex-grow">
+                <ButtonSelect
+                  label={<LiaShareSolid />}
+                  options={cityList}
+                  value={pickupLocation}
+                  onOptionChange={setPickupLocation}
+                />
+              </div>
+              <div className="w-full h-full flex flex-col justify-between">
+                <p className="text-[#333]">PickUp Location</p>
+                <p className="text-[var(--text-color)] font-bold">
+                  {pickupLocation?.value}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
+              <div className="bg-white rounded-md p-2 flex-grow">
+                <ButtonSelect
+                  label={
+                    <LiaShareSolid style={{ transform: "rotateY(180deg)" }} />
+                  }
+                  options={cityList}
+                  value={dropoffLocation}
+                  onOptionChange={setDropoffLocation}
+                />
+              </div>
+              <div className="w-full h-full flex flex-col justify-between">
+                <p className="text-[#333]">DropOff Location</p>
+                <p className="text-[var(--text-color)] font-bold">
+                  {dropoffLocation?.value}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1">
+              <RButton
+                isradius={true}
+                isfullwidth={true}
+                onClick={() => onProceed(1)}
+              >
+                <span className="flex w-full justify-center items-center gap-2 px-10">
+                  Proceed <BsArrowUpRight className="font-bold" />
+                </span>
+              </RButton>
+            </div>
           </div>
-        </TabPane>
-        <TabPane tab="Hourly" key="2">
-          Content of Tab Pane 2
         </TabPane>
       </BTabs>
     </BModal>

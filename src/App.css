@@ -147,4 +147,5 @@ to{transform:rotate(360deg)   }
 
 :where(.css-dev-only-do-not-override-18iikkb).ant-btn-primary {
   background-color: #1677ff !important;
+  color: white !important;
 }

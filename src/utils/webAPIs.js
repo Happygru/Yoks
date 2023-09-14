@@ -16,3 +16,6 @@ export const saveprofile_corporate =
   "CustomerRestController/customer_update_corporate";
 export const save_password =
   "CustomerRestController/customer_dashboard_change_password";
+
+// Booking
+export const get_booking_info = "ReservationRestController/booking1"

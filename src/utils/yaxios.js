@@ -1,5 +1,6 @@
 import axios from "axios";
-import { BACKEND_URL, getCookie } from "./constants";
+import { getCookie } from "./constants";
+import { BACKEND_URL } from "./config";
 
 const yaxios = axios.create({
   baseURL: BACKEND_URL,

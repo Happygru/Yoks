@@ -266,7 +266,7 @@ const Profile = () => {
                     onChange={(e) => setCountry(e.target.value)}
                   >
                     {countries?.map((item) => (
-                      <MenuItem value={item.label}>{item.label}</MenuItem>
+                      <MenuItem value={item.value}>{item.label}</MenuItem>
                     ))}
                   </Select>
                 </FormControl>

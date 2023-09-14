@@ -12,3 +12,4 @@ export const GET_CAR_LIST = "GET_CAR_LIST";
 
 // Booking
 export const SET_BOOKING_MODAL_VISIBLE = "SET_BOOKING_MODAL_VISIBLE";
+export const SET_BOOKING_STEP_1 = "SET_BOOKING_STEP_1";

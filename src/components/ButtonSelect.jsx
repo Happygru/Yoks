@@ -1,42 +1,43 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Select from "react-select";
 
-const ButtonSelect = ({
-  label = "Select",
+export default function ButtonSelect({
+  label = "Select...",
   options = [],
-  value = "",
+  buttonValue = "",
   onOptionChange,
-}) => {
+}) {
   const selectRef = useRef();
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleClick = () => {
-    selectRef.current.focus();
-  };
-
-  const handleBlur = () => {
-    selectRef.current.blur();
+    setShowPopup(!showPopup);
   };
 
   const handleChange = (selectedOption) => {
     onOptionChange(selectedOption);
+    setShowPopup(false);
   };
 
   return (
-    <>
-      <Select
-        options={options}
-        defaultValue={options.find((opt) => opt.value === value)}
-        ref={selectRef}
-        isSearchable={false}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        className="hidden"
-      />
-      <button onClick={handleClick} className="text-black">
-        {label}
-      </button>
-    </>
+    <div className="relative">
+      <div
+        onClick={handleClick}
+        className="cursor-pointer rounded-sm w-8 h-8 flex items-center justify-center relative"
+      >
+        <p className="text-2xl">{label}</p>
+      </div>
+      {showPopup && (
+        <div className="absolute z-[1000] top-[-2px] w-[380px] left-[50px]">
+          <Select
+            options={options}
+            defaultValue={options.find((opt) => opt.value === buttonValue)}
+            ref={selectRef}
+            isSearchable={true}
+            onChange={handleChange}
+          />
+        </div>
+      )}
+    </div>
   );
-};
-
-export default ButtonSelect;
+}
