@@ -7,7 +7,7 @@ import RButton from "../../components/RButton";
 import { BsArrowUpRight } from "react-icons/bs";
 import { signIn } from "../../redux/actions/authAction";
 import {
-  validatePassword,
+  // validatePassword,
   isEmail,
   toast_options,
 } from "../../utils/constants";
@@ -27,13 +27,13 @@ const SignIn = () => {
       return;
     }
 
-    if (validatePassword(password)) {
-      toast.warn(
-        "The length of the password must be at least 8.",
-        toast_options
-      );
-      return;
-    }
+    // if (validatePassword(password)) {
+    //   toast.warn(
+    //     "The length of the password must be at least 8.",
+    //     toast_options
+    //   );
+    //   return;
+    // }
 
     dispatch({ type: SET_LOADING, payload: true });
 

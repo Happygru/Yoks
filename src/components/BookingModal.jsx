@@ -1,15 +1,18 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Modal, Tabs } from "antd";
 import styled from "styled-components";
 import { FaPlay } from "react-icons/fa";
 import { BsCalendar4Event } from "react-icons/bs";
 import Select from "react-select";
 import ButtonDatePicker from "./ButtonDatePicker";
+import ButtonSelect from "./ButtonSelect";
 import { useState } from "react";
 import moment from "moment";
 import ButtonTimePicker from "./ButtonTimePicker";
 import { TbClockShare } from "react-icons/tb";
 import { useEffect } from "react";
-import { getCityAPIAuthToken } from "../utils/getCities";
+import { getGhanaCityList } from "../utils/getCities";
+import { LiaShareSolid } from "react-icons/lia";
 
 const { TabPane } = Tabs;
 
@@ -72,6 +75,8 @@ const BookingModal = ({ visible, setVisible }) => {
   const [endtime, setEndTime] = useState(moment(new Date()));
   // const [hourlyServiceType, setHourlyService] = useState(1);
 
+  const [cityList, setCityList] = useState([]);
+
   const proceed = () => {};
 
   const handleCancel = () => {
@@ -79,8 +84,15 @@ const BookingModal = ({ visible, setVisible }) => {
   };
 
   useEffect(() => {
-    getCityAPIAuthToken();
+    const getData = async () => {
+      setCityList(await getGhanaCityList());
+    };
+    getData();
   }, []);
+
+  useEffect(() => {
+    console.log(cityList);
+  }, [cityList]);
 
   return (
     <BModal
@@ -149,6 +161,32 @@ const BookingModal = ({ visible, setVisible }) => {
               </div>
               <div className="w-full h-full flex flex-col justify-between">
                 <p className="text-[#333]">End Date</p>
+                <p className="text-[var(--text-color)] font-bold">
+                  {enddate?.format("MMM DD, YYYY")}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
+              <div className="bg-white rounded-md p-2 flex-grow">
+                <ButtonTimePicker
+                  onTimeChange={(value) => setEndTime(value)}
+                  value={endtime}
+                  icon={<TbClockShare />}
+                />
+              </div>
+              <div className="w-full h-full flex flex-col justify-between">
+                <p className="text-[#333]">End Time</p>
+                <p className="text-[var(--text-color)] font-bold">
+                  {endtime?.format("h:mm A")}
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1 rounded-sm bg-[#F6F6F6] p-2 flex items-center justify-start gap-4">
+              <div className="bg-white rounded-md p-2 flex-grow">
+                <ButtonSelect label={<LiaShareSolid />} options={cityList} />
+              </div>
+              <div className="w-full h-full flex flex-col justify-between">
+                <p className="text-[#333]">PickUp Location</p>
                 <p className="text-[var(--text-color)] font-bold">
                   {enddate?.format("MMM DD, YYYY")}
                 </p>
