@@ -8,6 +8,8 @@ import { useState } from "react";
 import moment from "moment";
 import ButtonTimePicker from "./ButtonTimePicker";
 import { TbClockShare } from "react-icons/tb";
+import { useEffect } from "react";
+import { getCityAPIAuthToken } from "../utils/getCities";
 
 const { TabPane } = Tabs;
 
@@ -75,6 +77,10 @@ const BookingModal = ({ visible, setVisible }) => {
   const handleCancel = () => {
     setVisible(false);
   };
+
+  useEffect(() => {
+    getCityAPIAuthToken();
+  }, []);
 
   return (
     <BModal
