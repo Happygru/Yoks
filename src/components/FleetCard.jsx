@@ -15,7 +15,7 @@ const FleetCard = (props) => {
       <h1 className="text-[var(--text-color)] font-semibold text-[20px]">
         {title}
       </h1>
-      <p className="text-[var(--text-color)] text-lg font-text h-[84px]">
+      <p className="text-[var(--text-color)] text-lg font-text h-[90px]">
         {description}
       </p>
       <div>

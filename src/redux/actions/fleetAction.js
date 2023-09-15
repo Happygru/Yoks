@@ -1,12 +1,13 @@
 import { toast } from "react-toastify";
 import { stringConstant, toast_options } from "../../utils/constants";
 import { get_fleet } from "../../utils/webAPIs";
-import yaxios from "../../utils/yaxios";
+import axios from "axios";
 import { GET_CAR_LIST, SET_LOADING } from "../type";
+import { BACKEND_URL } from "../../utils/config";
 
 export const getCarList = (dispatch) => {
-  yaxios
-    .get(get_fleet)
+  axios
+    .get(`${BACKEND_URL}${get_fleet}`)
     .then((res) => {
       if (res.status === 200) {
         const { categories, vehicles } = res.data;
