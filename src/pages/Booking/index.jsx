@@ -1,5 +1,7 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { PiPoliceCarLight } from "react-icons/pi";
 import { IoMdSwitch } from "react-icons/io";
 import { FiUsers } from "react-icons/fi";
@@ -19,14 +21,24 @@ import {
   DirectionsRenderer,
 } from "@react-google-maps/api";
 import { GOOGLE_API_KEY } from "../../utils/config";
+import { SET_LOADING } from "../../redux/type";
+import { getInfoByToken } from "../../redux/actions/authAction";
 
 const Booking = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const book_state = useSelector((state) => state.book);
 
   const [step, setStep] = useState(1);
 
   const [markers, setMarkers] = useState([]);
   const [response, setResponse] = useState(null);
+
+  useEffect(() => {
+    dispatch({ type: SET_LOADING, payload: true });
+    getInfoByToken(dispatch, true, navigate);
+  }, []);
 
   const mapStyles = {
     height: "100%",

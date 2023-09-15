@@ -1,9 +1,22 @@
-import { useSelector } from "react-redux";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { SET_LOADING } from "../../redux/type";
+import { getInfoByToken } from "../../redux/actions/authAction";
 import { FaCheck } from "react-icons/fa";
 
 const Submit = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const book_state = useSelector((state) => state.book);
   const userdata = useSelector((state) => state.auth.user);
+
+  useEffect(() => {
+    dispatch({ type: SET_LOADING, payload: true });
+    getInfoByToken(dispatch, true, navigate);
+  }, []);
+
   return (
     <>
       <div className="w-full">
