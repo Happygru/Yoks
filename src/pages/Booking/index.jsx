@@ -7,6 +7,9 @@ import { MdPayment } from "react-icons/md";
 import { BsCalendar4Event, BsCheck2 } from "react-icons/bs";
 import BookingStepCard from "../../components/BookingStepCard";
 import Vehicle from "./Vehicle";
+import AddOn from "./AddOn";
+import Payment from "./Payment";
+import Details from "./Details";
 import { Card } from "@mui/material";
 import {
   GoogleMap,
@@ -41,6 +44,21 @@ const Booking = () => {
 
   const directionsCallback = (res) => {
     if (res !== null && res.status === "OK") setResponse(res);
+  };
+
+  const tabPaneActive = (key) => {
+    switch (key) {
+      case 1:
+        return <Vehicle />;
+      case 2:
+        return <AddOn />;
+      case 3:
+        return <Details />;
+      case 4:
+        return <Payment />;
+      default:
+        break;
+    }
   };
 
   return (
@@ -86,9 +104,7 @@ const Booking = () => {
             </div>
           </div>
           <div className="grid grid-cols-3 py-10 gap-6">
-            <div className="col-span-2">
-              <Vehicle />
-            </div>
+            <div className="col-span-2">{tabPaneActive(step)}</div>
             <div className="col-span-1">
               <Card className="p-6">
                 <div className="w-full flex justify-between items-center">
@@ -132,7 +148,7 @@ const Booking = () => {
                       <BsCalendar4Event />
                     </div>
                     <p className="font-text font-bold">
-                      {book_state?.startdate.format("MMM DD, YYYY")}
+                      {book_state?.startdate.format("ddd, MMM DD, YYYY")}
                     </p>
                   </div>
                   <div className="w-full flex items-center gap-4">

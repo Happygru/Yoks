@@ -17,6 +17,7 @@ import Dashboard from "./pages/MyAccount/Dashboard";
 import Profile from "./pages/MyAccount/Profile";
 import ChangePassword from "./pages/MyAccount/ChangePassword";
 import MyBooking from "./pages/MyAccount/MyBooking";
+import Submit from "./pages/Booking/Submit";
 
 const AppRoutes = [
   {
@@ -50,6 +51,10 @@ const AppRoutes = [
       {
         path: "/booking",
         element: <Booking />,
+      },
+      {
+        path: "/book_submit",
+        element: <Submit />,
       },
       {
         path: "/service_detail",

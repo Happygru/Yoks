@@ -95,6 +95,10 @@ to{transform:rotate(360deg)   }
   .remember_check {
     @apply w-4 h-4 checked:bg-[#F0FBF7] checked:text-[var(--text-color)] outline-none;
   }
+
+  .y_badge {
+    @apply bg-[#024273] rounded-3xl text-white text-sm py-1 px-3;
+  }
 }
 
 /* Dropdown */

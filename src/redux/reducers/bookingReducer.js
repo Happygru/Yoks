@@ -1,4 +1,9 @@
-import { SET_BOOKING_MODAL_VISIBLE, SET_BOOKING_STEP_1 } from "../type";
+import {
+  SET_ADDONS,
+  SET_BOOKING_MODAL_VISIBLE,
+  SET_BOOKING_STEP_1,
+  SET_FLEET_LIST,
+} from "../type";
 import moment from "moment";
 
 const initialState = {
@@ -24,6 +29,8 @@ const initialState = {
     label: "1 Hr",
     value: 1,
   },
+  fleet_list: [],
+  addons: [],
 };
 
 const bookingReducer = (state = initialState, action) => {
@@ -58,6 +65,16 @@ const bookingReducer = (state = initialState, action) => {
         dropoffLocation,
         serviceHourly,
         serviceType,
+      };
+    case SET_FLEET_LIST:
+      return {
+        ...state,
+        fleet_list: payload,
+      };
+    case SET_ADDONS:
+      return {
+        ...state,
+        addons: payload,
       };
     default:
       return state;

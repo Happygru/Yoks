@@ -154,7 +154,7 @@ const BookingModal = ({ visible, setVisible }) => {
               <div className="w-full h-full flex flex-col justify-between">
                 <p className="text-[#333]">Start Date</p>
                 <p className="text-[var(--text-color)] font-bold">
-                  {startdate?.format("MMM DD, YYYY")}
+                  {startdate?.format("ddd, MMM DD, YYYY")}
                 </p>
               </div>
             </div>
@@ -184,7 +184,7 @@ const BookingModal = ({ visible, setVisible }) => {
               <div className="w-full h-full flex flex-col justify-between">
                 <p className="text-[#333]">End Date</p>
                 <p className="text-[var(--text-color)] font-bold">
-                  {enddate?.format("MMM DD, YYYY")}
+                  {enddate?.format("ddd, MMM DD, YYYY")}
                 </p>
               </div>
             </div>
@@ -278,7 +278,7 @@ const BookingModal = ({ visible, setVisible }) => {
               <div className="w-full h-full flex flex-col justify-between">
                 <p className="text-[#333]">Start Date</p>
                 <p className="text-[var(--text-color)] font-bold">
-                  {startdate?.format("MMM DD, YYYY")}
+                  {startdate?.format("ddd, MMM DD, YYYY")}
                 </p>
               </div>
             </div>
@@ -308,7 +308,7 @@ const BookingModal = ({ visible, setVisible }) => {
               <div className="w-full h-full flex flex-col justify-between">
                 <p className="text-[#333]">End Date</p>
                 <p className="text-[var(--text-color)] font-bold">
-                  {enddate?.format("MMM DD, YYYY")}
+                  {enddate?.format("ddd, MMM DD, YYYY")}
                 </p>
               </div>
             </div>
