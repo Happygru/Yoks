@@ -43,7 +43,7 @@ const Home = () => {
         <div className="absolute top-0 z-10 w-full h-full bg-black/30">
           <div className="max-w-[1280px] w-[90%] h-full m-auto grid grid-rows-2 relative">
             <div className="row-span-1 hidden md:block">
-              <div className="flex items-center justify-end w-full h-full">
+              <div className="flex items-start pt-8 justify-end w-full h-full">
                 <RButton
                   isradius={true}
                   data-aos="fade-down"
