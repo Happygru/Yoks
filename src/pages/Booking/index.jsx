@@ -83,7 +83,7 @@ const Booking = () => {
                 icon={<PiPoliceCarLight />}
                 title="Vehicle"
                 num="01"
-                isActive={step >= 1}
+                isactive={step >= 1}
                 onClick={() => setStep(1)}
               />
             </div>
@@ -92,7 +92,7 @@ const Booking = () => {
                 icon={<IoMdSwitch />}
                 title="Add-On"
                 num="02"
-                isActive={step >= 2}
+                isactive={step >= 2}
                 onClick={() => setStep(2)}
               />
             </div>
@@ -101,7 +101,7 @@ const Booking = () => {
                 icon={<FiUsers />}
                 title="Details"
                 num="03"
-                isActive={step >= 3}
+                isactive={step >= 3}
                 onClick={() => setStep(3)}
               />
             </div>
@@ -110,7 +110,7 @@ const Booking = () => {
                 icon={<MdPayment />}
                 title="Payment"
                 num="04"
-                isActive={step === 4}
+                isactive={step === 4}
                 onClick={() => setStep(4)}
               />
             </div>

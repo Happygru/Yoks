@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 // React imports
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -20,8 +20,8 @@ import ButtonDatePicker from "./ButtonDatePicker";
 import ButtonSelect from "./ButtonSelect";
 import ButtonTimePicker from "./ButtonTimePicker";
 import RButton from "./RButton";
-import { getGhanaCityList } from "../utils/getCities";
 import { SET_BOOKING_STEP_1 } from "../redux/type";
+import citydata from "../utils/citylist.json";
 
 const { TabPane } = Tabs;
 
@@ -73,22 +73,25 @@ const BTabs = styled(Tabs)`
 `;
 
 const BookingModal = ({ visible, setVisible }) => {
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const book_state = useSelector(state => state.book);
-  
+  const book_state = useSelector((state) => state.book);
+
   const [serviceType, setServiceType] = useState(book_state?.serviceType);
   const [serviceHourly, setServiceHourly] = useState(book_state?.serviceHourly);
   const [startdate, setStartDate] = useState(book_state?.startdate);
   const [starttime, setStartTime] = useState(book_state?.starttime);
   const [enddate, setEndDate] = useState(book_state?.enddate);
   const [endtime, setEndTime] = useState(book_state?.endtime);
-  const [pickupLocation, setPickupLocation] = useState(book_state?.pickupLocation);
-  const [dropoffLocation, setDropoffLocation] = useState(book_state?.dropoffLocation);
+  const [pickupLocation, setPickupLocation] = useState(
+    book_state?.pickupLocation
+  );
+  const [dropoffLocation, setDropoffLocation] = useState(
+    book_state?.dropoffLocation
+  );
 
-  const [cityList, setCityList] = useState([]);
+  const cityList = citydata;
 
   const onProceed = (type) => {
     const bookingData = {
@@ -109,13 +112,6 @@ const BookingModal = ({ visible, setVisible }) => {
   const handleCancel = () => {
     setVisible(false);
   };
-
-  useEffect(() => {
-    const getData = async () => {
-      setCityList(await getGhanaCityList());
-    };
-    getData();
-  }, []);
 
   return (
     <BModal

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Card, TextField } from "@mui/material";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
@@ -9,12 +8,12 @@ import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import RButton from "../../components/RButton";
 import Select from "react-select";
 import styled from "styled-components";
-import { getGhanaCityList } from "../../utils/getCities";
+import citydata from "../../utils/citylist.json";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const Details = () => {
   const book_state = useSelector((state) => state.book);
-  const [cityList, setCityList] = useState([]);
+  const cityList = citydata;
 
   const MSelect = styled(Select)`
     height: 53px;
@@ -24,13 +23,6 @@ const Details = () => {
       width: 100%;
     }
   `;
-
-  useEffect(() => {
-    const getData = async () => {
-      setCityList(await getGhanaCityList());
-    };
-    getData();
-  }, []);
 
   return (
     <>

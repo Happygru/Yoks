@@ -1,17 +1,17 @@
 const BookingStepCard = (props) => {
-  const { icon, title, num, isActive = false } = props;
+  const { icon, title, num, isactive = false } = props;
   return (
     <>
       <div
         {...props}
         className={`w-full flex justify-between items-center border-b-2 ${
-          isActive ? "border-black hover:bg-gray-300" : "border-[#e5e5e5]"
+          isactive ? "border-black hover:bg-gray-300" : "border-[#e5e5e5]"
         } py-8 px-4 cursor-pointer transition-all select-none`}
       >
         <div className="flex items-center gap-6">
           <span
             className={`${
-              isActive ? "text-white bg-[#024273]" : "bg-[#F0FBF7]"
+              isactive ? "text-white bg-[#024273]" : "bg-[#F0FBF7]"
             } p-4 rounded-full text-2xl`}
           >
             {icon}
