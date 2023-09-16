@@ -1,12 +1,14 @@
+import { useState } from "react";
 import RButton from "./RButton";
 import { ImUsers, ImLock } from "react-icons/im";
 import { GrCar } from "react-icons/gr";
 import { TbAirConditioning } from "react-icons/tb";
 import { BsArrowUpRight } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import BookingModal from "./BookingModal";
 
 const FleetCard = (props) => {
   const { title, description, image, passengers, doors, luggage } = props;
+  const [bookingModalVisible, setBookingModalVisible] = useState(false);
   return (
     <div
       {...props}
@@ -62,15 +64,19 @@ const FleetCard = (props) => {
             </div>
             <div className="flex items-center col-span-1">
               <RButton isradius={true}>
-                <Link className="flex items-center gap-2" to="/booking">
+                <span className="flex items-center gap-2" onClick={() => setBookingModalVisible(true)}>
                   Book Now
                   <BsArrowUpRight />
-                </Link>
+                </span>
               </RButton>
             </div>
           </div>
         </div>
       </div>
+      <BookingModal
+        visible={bookingModalVisible}
+        setVisible={setBookingModalVisible}
+      />
     </div>
   );
 };
