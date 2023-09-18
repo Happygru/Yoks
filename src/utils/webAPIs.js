@@ -18,4 +18,5 @@ export const save_password =
   "CustomerRestController/customer_dashboard_change_password";
 
 // Booking
-export const get_booking_info = "ReservationRestController/booking1"
+export const get_wholeday_booking = "BookingRestController/wholeday_booking"
+export const get_hourly_booking = "BookingRestController/hourly_booking"

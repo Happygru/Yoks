@@ -61,7 +61,7 @@ const Booking = () => {
   const tabPaneActive = (key) => {
     switch (key) {
       case 1:
-        return <Vehicle />;
+        return <Vehicle onStep={setStep} />;
       case 2:
         return <AddOn />;
       case 3:

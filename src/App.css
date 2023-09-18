@@ -153,3 +153,7 @@ to{transform:rotate(360deg)   }
   background-color: #1677ff !important;
   color: white !important;
 }
+
+.currency_after::after {
+  content: "GH¢";
+}

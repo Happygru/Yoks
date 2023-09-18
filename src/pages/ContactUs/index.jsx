@@ -73,11 +73,12 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <img
+        {/* <img
           src="image/contactus/map.svg"
           className="w-full lg:w-5/12 lg:absolute right-0 top-0"
           alt=""
-        />
+        /> */}
+        <iframe className="w-full lg:w-5/12 lg:absolute right-0 top-0 border-none" title="1" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJYzOzT3-Q3w8RkwzmPAWSSRA&key=AIzaSyAkLkPkOLNYLZ0KffUPCNP3Fd0ZkuP3AVU"></iframe>
       </div>
       <div className="w-full py-12 md:pt-[15%]">
         <div className="max-w-[1280px] w-[90%] m-auto grid grid-cols-1 md:grid-cols-2 gap-16">

@@ -3,6 +3,7 @@ import {
   SET_BOOKING_MODAL_VISIBLE,
   SET_BOOKING_STEP_1,
   SET_FLEET_LIST,
+  SET_VEHICLE_ID
 } from "../type";
 import moment from "moment";
 
@@ -31,6 +32,7 @@ const initialState = {
   },
   fleet_list: [],
   addons: [],
+  vehicle_id: ''
 };
 
 const bookingReducer = (state = initialState, action) => {
@@ -76,6 +78,11 @@ const bookingReducer = (state = initialState, action) => {
         ...state,
         addons: payload,
       };
+    case SET_VEHICLE_ID:
+      return {
+        ...state,
+        vehicle_id: payload,
+      }
     default:
       return state;
   }
