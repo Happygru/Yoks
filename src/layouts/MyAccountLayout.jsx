@@ -4,8 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useLocation, useNavigate, Link } from "react-router-dom";
 import DashboardMenuItem from "../components/DashboardMenuItem";
 import { HiOutlinePresentationChartLine, HiOutlineUsers } from "react-icons/hi";
+import { BiSolidCar } from 'react-icons/bi';
 import { GiPadlock } from "react-icons/gi";
 import { TbLogout } from "react-icons/tb";
+import { AiOutlineTransaction } from 'react-icons/ai';
+import { SiExpensify } from 'react-icons/si';
 import { LOG_OUT, SET_LOADING } from "../redux/type";
 import { ToastContainer } from "react-toastify";
 import { getInfoByToken } from "../redux/actions/authAction";
@@ -64,9 +67,15 @@ const MyAccountLayout = () => {
               isactive={location.pathname === "/change_password"}
               icon={<GiPadlock />}
             />
+            <DashboardMenuItem
+              title="Manage Vehicles"
+              icon={<BiSolidCar />}
+              isactive={location.pathname === "/manage_vehicles"}
+              href="/manage_vehicles"
+            />
           </div>
         </div>
-        <div className="w-full mt-20 py-6 border-t border-[rgba(255,255,255,0.4)]">
+        <div className="w-full mt-2 py-6 border-t border-[rgba(255,255,255,0.4)]">
           <p className="text-white font-text">Booking</p>
           <div className="mt-4 w-full flex flex-col gap-1">
             <DashboardMenuItem
@@ -77,7 +86,24 @@ const MyAccountLayout = () => {
             />
           </div>
         </div>
-        <div className="w-full mt-20 py-6 border-t border-[rgba(255,255,255,0.4)]">
+        <div className="w-full mt-2 py-6 border-t border-[rgba(255,255,255,0.4)]">
+          <p className="text-white font-text">Transactions</p>
+          <div className="mt-2 w-full flex flex-col gap-1">
+            <DashboardMenuItem
+              title="Income"
+              icon={<AiOutlineTransaction />}
+              href="/income"
+              isactive={location.pathname === "/income"}
+            />
+            <DashboardMenuItem
+              title="Expenses"
+              icon={<SiExpensify />}
+              href="/expenses"
+              isactive={location.pathname === "/expenses"}
+            />
+          </div>
+        </div>
+        <div className="w-full mt-2 py-6 border-t border-[rgba(255,255,255,0.4)]">
           <div className="w-full flex flex-col gap-1">
             <DashboardMenuItem
               title="Logout"

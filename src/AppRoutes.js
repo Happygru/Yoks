@@ -17,7 +17,11 @@ import Dashboard from "./pages/MyAccount/Dashboard";
 import Profile from "./pages/MyAccount/Profile";
 import ChangePassword from "./pages/MyAccount/ChangePassword";
 import MyBooking from "./pages/MyAccount/MyBooking";
+import ManageVehicles from "./pages/MyAccount/Vehicle_Management/ManageVehicles";
+import IncomeTransaction from "./pages/MyAccount/IncomeTransaction";
+import ExpensesTransaction from "./pages/MyAccount/ExpensesTransaction";
 import Submit from "./pages/Booking/Submit";
+import NewVehicle from "./pages/MyAccount/Vehicle_Management/NewVehicle";
 
 const AppRoutes = [
   {
@@ -86,6 +90,22 @@ const AppRoutes = [
         path: "/mybooking",
         element: <MyBooking />,
       },
+      {
+        path: "/manage_vehicles",
+        element: <ManageVehicles />
+      },
+      {
+        path: "/new_vehicle",
+        element: <NewVehicle />
+      },
+      {
+        path: "/income",
+        element: <IncomeTransaction />
+      },
+      {
+        path: '/expenses',
+        element: <ExpensesTransaction />
+      }
     ],
   },
   {

@@ -25,7 +25,6 @@ const Home = () => {
       .get("https://test.yoksghana.com/api/web/v1/FleetRestController/fleet")
       .then((res) => {
         const { categories, vehicles } = res.data;
-
         const result = categories.slice(0, 3).map((category) => ({
           ...category,
           vehicles: vehicles.filter(
