@@ -7,8 +7,9 @@ import { HiOutlinePresentationChartLine, HiOutlineUsers } from "react-icons/hi";
 import { BiSolidCar } from 'react-icons/bi';
 import { GiPadlock } from "react-icons/gi";
 import { TbLogout } from "react-icons/tb";
-import { AiOutlineTransaction } from 'react-icons/ai';
-import { SiExpensify } from 'react-icons/si';
+import { BsCoin } from "react-icons/bs";
+import { AiOutlineTransaction } from "react-icons/ai";
+import { SiExpensify } from "react-icons/si";
 import { LOG_OUT, SET_LOADING } from "../redux/type";
 import { ToastContainer } from "react-toastify";
 import { getInfoByToken } from "../redux/actions/authAction";
@@ -30,7 +31,7 @@ const MyAccountLayout = () => {
   }, []);
 
   return (
-    <div className="h-screen w-screen flex">
+    <div className="flex w-screen h-screen">
       <div
         className={`${
           isLoading ? "fixed" : "hidden"
@@ -48,7 +49,7 @@ const MyAccountLayout = () => {
         </Link>
         <div className="w-full mt-20">
           <p className="text-white font-text">My Account</p>
-          <div className="mt-4 w-full flex flex-col gap-1">
+          <div className="flex flex-col w-full gap-1 mt-4">
             <DashboardMenuItem
               title="Dashboard"
               icon={<HiOutlinePresentationChartLine />}
@@ -73,11 +74,17 @@ const MyAccountLayout = () => {
               isactive={location.pathname === "/manage_vehicles"}
               href="/manage_vehicles"
             />
+            <DashboardMenuItem
+              title="Payment Details"
+              icon={<BsCoin />}
+              isactive={location.pathname === "/payment_details"}
+              href="/payment_details"
+            />
           </div>
         </div>
         <div className="w-full mt-2 py-6 border-t border-[rgba(255,255,255,0.4)]">
           <p className="text-white font-text">Booking</p>
-          <div className="mt-4 w-full flex flex-col gap-1">
+          <div className="flex flex-col w-full gap-1 mt-4">
             <DashboardMenuItem
               title="My Booking"
               icon={<HiOutlinePresentationChartLine />}
@@ -88,7 +95,7 @@ const MyAccountLayout = () => {
         </div>
         <div className="w-full mt-2 py-6 border-t border-[rgba(255,255,255,0.4)]">
           <p className="text-white font-text">Transactions</p>
-          <div className="mt-2 w-full flex flex-col gap-1">
+          <div className="flex flex-col w-full gap-1 mt-2">
             <DashboardMenuItem
               title="Income"
               icon={<AiOutlineTransaction />}
@@ -104,7 +111,7 @@ const MyAccountLayout = () => {
           </div>
         </div>
         <div className="w-full mt-2 py-6 border-t border-[rgba(255,255,255,0.4)]">
-          <div className="w-full flex flex-col gap-1">
+          <div className="flex flex-col w-full gap-1">
             <DashboardMenuItem
               title="Logout"
               icon={<TbLogout />}

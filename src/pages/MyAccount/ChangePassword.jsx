@@ -41,13 +41,13 @@ const ChangePassword = () => {
 
   return (
     <>
-      <div className="w-full py-6 flex flex-col gap-2">
-        <p className="font-bold text-xl">Change Password</p>
-        <p className="font-text text-sm">Dashboard - Edit Profile</p>
+      <div className="flex flex-col w-full gap-2 py-6">
+        <p className="text-xl font-bold">Change Password</p>
+        <p className="text-sm font-text">Dashboard - Edit Profile</p>
       </div>
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 bg-white ">
+      <div className="grid w-full grid-cols-1 bg-white lg:grid-cols-2 ">
         <div className="col-span-1">
-          <div className="py-12 px-8 w-full rounded-sm shadow-sm">
+          <div className="w-full px-8 py-12 rounded-sm shadow-sm">
             <div className="grid grid-cols-1 gap-6">
               <div className="col-span-1">
                 <TextField
@@ -99,7 +99,7 @@ const ChangePassword = () => {
                   style={{ backgroundColor: "rgba(237,139,0,0.9)" }}
                   onClick={updatePassword}
                 >
-                  <span className="flex w-full justify-center items-center gap-2 px-10 font-normal">
+                  <span className="flex items-center justify-center w-full gap-2 px-10 font-normal">
                     Update Password
                     <BsArrowUpRight className="font-bold" />
                   </span>
@@ -109,7 +109,7 @@ const ChangePassword = () => {
           </div>
         </div>
         <div className="col-span-1">
-          <div className="py-12 px-8 w-full rounded-sm shadow-sm">
+          <div className="w-full px-8 py-12 rounded-sm shadow-sm">
             <b className="text-lg">Password must:</b>
             <ul>
               <li>🚀 Be between 9 and 64 characters</li>

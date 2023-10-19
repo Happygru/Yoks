@@ -22,6 +22,7 @@ import IncomeTransaction from "./pages/MyAccount/IncomeTransaction";
 import ExpensesTransaction from "./pages/MyAccount/ExpensesTransaction";
 import Submit from "./pages/Booking/Submit";
 import NewVehicle from "./pages/MyAccount/Vehicle_Management/NewVehicle";
+import PaymentDetails from "./pages/MyAccount/PaymentDetails";
 
 const AppRoutes = [
   {
@@ -92,20 +93,24 @@ const AppRoutes = [
       },
       {
         path: "/manage_vehicles",
-        element: <ManageVehicles />
+        element: <ManageVehicles />,
       },
       {
         path: "/new_vehicle",
-        element: <NewVehicle />
+        element: <NewVehicle />,
+      },
+      {
+        path: "/payment_details",
+        element: <PaymentDetails />,
       },
       {
         path: "/income",
-        element: <IncomeTransaction />
+        element: <IncomeTransaction />,
       },
       {
-        path: '/expenses',
-        element: <ExpensesTransaction />
-      }
+        path: "/expenses",
+        element: <ExpensesTransaction />,
+      },
     ],
   },
   {
