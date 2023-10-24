@@ -140,21 +140,21 @@ const Profile = () => {
   return (
     <>
       {userdata?.ctype === "Individual" ? (
-        <div className="w-full py-6 flex flex-col gap-2">
-          <p className="font-bold text-xl">Edit Profile</p>
-          <p className="font-text text-sm">Dashboard - Edit Profile</p>
+        <div className="flex flex-col w-full gap-2 py-6">
+          <p className="text-xl font-bold">Edit Profile</p>
+          <p className="text-sm font-text">Dashboard - Edit Profile</p>
         </div>
       ) : (
-        <div className="w-full py-6 flex flex-col gap-2">
-          <p className="font-bold text-xl">Edit Company Information</p>
-          <p className="font-text text-sm">
+        <div className="flex flex-col w-full gap-2 py-6">
+          <p className="text-xl font-bold">Edit Company Information</p>
+          <p className="text-sm font-text">
             Dashboard - Edit Company Information
           </p>
         </div>
       )}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-3">
+      <div className="grid w-full grid-cols-1 lg:grid-cols-3">
         <div className="col-span-2">
-          <div className="py-12 px-8 w-full bg-white rounded-sm shadow-sm">
+          <div className="w-full px-8 py-12 bg-white rounded-sm shadow-sm">
             <div className="grid grid-cols-1 gap-6">
               <div className="col-span-1">
                 <TextField
@@ -183,7 +183,7 @@ const Profile = () => {
                       </Select>
                     </FormControl>
                   </div>
-                  <div className="col-span-1 flex gap-4 flex-nowrap">
+                  <div className="flex col-span-1 gap-4 flex-nowrap">
                     <FormControl fullWidth size="small">
                       <InputLabel>Day</InputLabel>
                       <Select
@@ -277,7 +277,7 @@ const Profile = () => {
                   style={{ backgroundColor: "rgba(237,139,0,0.9)" }}
                   onClick={updateProfile}
                 >
-                  <span className="flex w-full justify-center items-center gap-2 px-10 font-normal">
+                  <span className="flex items-center justify-center w-full gap-2 px-10 font-normal">
                     Update{" "}
                     {userdata?.ctype === "Individual"
                       ? "Profile"

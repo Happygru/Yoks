@@ -80,8 +80,16 @@ const Services = () => {
             <ServiceCard
               img="thumbnail9.svg"
               title="Meet and Greet/Visa Arrangement"
-              text=" Processing travel documentation and immigration forms, assist personnel with check-In arrangements at the Airport"
+              text="Processing travel documentation and immigration forms, assist personnel with check-In arrangements at the Airport"
               url="service_meet"
+            />
+          </div>
+          <div className="col-span-1">
+            <ServiceCard
+              img="thumbnail4.png"
+              title="ThirdParty"
+              text="Third Party"
+              url="service_thirdparty"
             />
           </div>
         </div>

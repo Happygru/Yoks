@@ -8,6 +8,7 @@ import ServiceEventticketing from "./ServiceEventticketing";
 import ServiceSecurityescort from "./ServiceSecurityescort";
 import ServiceTourpackages from "./ServiceTourpackages";
 import ServiceMeet from "./ServiceMeet";
+import ServiceThirdParty from "./ServiceThirdParty";
 
 const ServiceDetail = () => {
   let [searchParams] = useSearchParams();
@@ -31,6 +32,8 @@ const ServiceDetail = () => {
       return <ServiceTourpackages />;
     case "service_meet":
       return <ServiceMeet />;
+    case "service_thirdparty":
+      return <ServiceThirdParty />;
     default:
       break;
   }
