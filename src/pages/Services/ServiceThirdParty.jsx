@@ -36,7 +36,7 @@ const ServiceThirdParty = () => {
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </p>
         </div>
-        <div className="flex justify-evenly w-[90%] max-w-[1280px] m-auto pb-8">
+        <div className="flex justify-evenly w-[90%] max-w-[1280px] m-auto pb-8 flex-wrap">
           <CountNumberCard
             number={3500}
             symbol={"+"}
@@ -63,9 +63,9 @@ const ServiceThirdParty = () => {
         <div className="w-full absolute top-0 flex justify-center">
           <div className="w-[90%] max-w-[1280px] flex justify-end pt-20">
             <div className="w-1/2">
-              <p className="text-8xl font-bold">
-                <span className="text-[160px]">B</span>e a partner Today. Earn
-                with you car
+              <p className="text-8xl font-bold hidden md:block">
+                <span className="text-9xl">B</span>e a partner Today. Earn with
+                you car
               </p>
             </div>
           </div>
