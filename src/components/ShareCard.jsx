@@ -1,16 +1,26 @@
-import { FiArrowRight } from "react-icons/fi";
+import RButton from "../components/RButton";
+import { BsArrowUpRight } from "react-icons/bs";
 
-const ShareCard = ({ image, title, text }) => {
+const ShareCard = (props) => {
+  const { image, title, text } = props;
   return (
-    <div className="max-w-[400px] w-full rounded-lg overflow-hidden shadow-md">
+    <div
+      className="max-w-[400px] w-full rounded-lg overflow-hidden shadow-2xl shadow-neutral-400 relative"
+      {...props}
+    >
       <img src={image} alt="" className="w-full" />
-      <div className="w-full p-4 flex flex-col gap-4">
+      <div className="w-full p-4 flex flex-col gap-4 pb-20">
         <p className="text-lg font-bold">{title}</p>
         <p className="text-base">{text}</p>
-        <button className="px-4 py-2 rounded-full bg-[#39c0c3] w-max text-white flex items-center gap-2 text-sm">
-          <span className=" uppercase">get Started</span>
-          <FiArrowRight />
-        </button>
+        <RButton
+          isfullradius={true}
+          style={{ position: "absolute", bottom: "15px" }}
+        >
+          <span className="flex items-center gap-4 px-10 text-base font-normal">
+            Get Started
+            <BsArrowUpRight />
+          </span>
+        </RButton>
       </div>
     </div>
   );

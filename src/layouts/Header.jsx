@@ -55,6 +55,9 @@ const Header = () => {
           <Link to="/contactus" className="cursor-pointer nav_item">
             Contact
           </Link>
+          <Link to="/thirdparty" className="cursor-pointer nav_item">
+            Thirdparty
+          </Link>
         </nav>
         <div className="flex items-center gap-3">
           <div className="hidden gap-3 md:flex">

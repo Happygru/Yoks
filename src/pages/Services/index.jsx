@@ -84,14 +84,6 @@ const Services = () => {
               url="service_meet"
             />
           </div>
-          <div className="col-span-1">
-            <ServiceCard
-              img="thumbnail4.png"
-              title="ThirdParty"
-              text="Third Party"
-              url="service_thirdparty"
-            />
-          </div>
         </div>
       </div>
     </>

@@ -23,6 +23,7 @@ import ExpensesTransaction from "./pages/MyAccount/ExpensesTransaction";
 import Submit from "./pages/Booking/Submit";
 import NewVehicle from "./pages/MyAccount/Vehicle_Management/NewVehicle";
 import PaymentDetails from "./pages/MyAccount/PaymentDetails";
+import ThirdParty from "./pages/ThirdParty";
 
 const AppRoutes = [
   {
@@ -68,6 +69,10 @@ const AppRoutes = [
       {
         path: "/team_detail",
         element: <TeamDetail />,
+      },
+      {
+        path: "/thirdparty",
+        element: <ThirdParty />,
       },
     ],
   },
